@@ -11,8 +11,8 @@ class Sorcier :
 
 
     def __init__(self,nom):
-        saisie1 = print("Entrez le nom du premier sorcier : ")
-        saisie2 = print("Entrez le nom du deuxième sorcier : ")
+        self.nom1 = print("Entrez le nom du premier sorcier : ")
+        self.nom2 = print("Entrez le nom du deuxième sorcier : ")
      
     def getNom(self):
         #retourne le nom du sorcier
