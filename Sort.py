@@ -26,3 +26,5 @@ class Sort:
     
     def getPDR(self):
         #initialise le nombre de points de récupération du sort
+
+    elle m'a emboucanewy
