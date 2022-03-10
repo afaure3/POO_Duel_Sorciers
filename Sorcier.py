@@ -19,7 +19,8 @@ class Sorcier :
         
 
     def getPDV(self):
-        #retourne le nombre de points de vie du sorcier
+        PDV1 = 5
+        PDV2 = 5
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
@@ -35,5 +36,3 @@ class Sorcier :
     
     def perdrePDV(self,nbPdv):
        #enlève nbPdv points à la jauge de points de vie du sorcier
-    
-    
