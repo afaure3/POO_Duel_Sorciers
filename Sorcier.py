@@ -19,8 +19,8 @@ class Sorcier :
         
 
     def getPDV(self):
-        PDV1 = 5
-        PDV2 = 5
+        self.PDV1 = 5
+        self.PDV2 = 5
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
