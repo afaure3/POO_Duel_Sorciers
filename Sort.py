@@ -10,19 +10,19 @@ Created on Sun Jan  2 12:12:55 2022
 class Sort:
 
     def __init__(self,nom, type, pdd, pdr):
-        self.nom = getNom
-        self.type = getType
-        self.pdd = getPDD
-        self.pdr = getPDR
+        self._nom = nom
+        self._pdd = pdd
+        self._pdr = pdr
+        self._type = type
     
     def getNom(self):
-        nom = sortOffensif
-    
+        return self._nom
+
     def getType(self):
-        #retourne le type du sort
+        return self._type
     
     def getPDD(self):
-        #retourne le nombre de points de dégâts du sort
+        return self._pdd
     
     def getPDR(self):
-        #initialise le nombre de points de récupération du sort
+        return self._pdr
