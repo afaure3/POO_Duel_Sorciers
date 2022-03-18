@@ -11,16 +11,18 @@ class Sorcier :
 
 
     def __init__(self,nom):
-        self.nom1 = print("Entrez le nom du premier sorcier : ")
-        self.nom2 = print("Entrez le nom du deuxième sorcier : ")
+        #self.nom1 = print("Entrez le nom du premier sorcier : ")
+        #self.nom2 = print("Entrez le nom du deuxième sorcier : ")
+        self.nom = print("Entrer le nom du sorcier : ")
      
     def getNom(self):
-        #retourne le nom du sorcier
+        print("Le sorcier s'appelle " + self.nom)  #retourne le nom du sorcier
         
 
     def getPDV(self):
-        self.PDV1 = 5
-        self.PDV2 = 5
+        #self.PDV1 = 5
+        #self.PDV2 = 5
+        self.PDV = 5
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
