@@ -16,7 +16,7 @@ class Sorcier :
         self.nom = print("Entrer le nom du sorcier : ")
      
     def getNom(self):
-        print("Le sorcier s'appelle " + self.nom".")  #retourne le nom du sorcier
+        print("Le sorcier s'appelle " + self.nom + ".")  #retourne le nom du sorcier
         
 
     def getPDV(self):
@@ -29,7 +29,11 @@ class Sorcier :
         self.PDV = 
     
     def lancerSort(self,sort):
-        print(self.nom " lance le sort " ) #manque le moyen de récupérer le nom et type du sort 
+        if type(self.sort) = "défensif"
+            print()
+        if type(self.sort) = "offensif"
+            print()
+        elif print() 
 		#affiche : [nom du sorcier] lance le sort [nom du sort] de type [type du sort]
         #si le sort est de type offensif ou sournois, affiche : avec [nombre de points de dégâts du sort] points de dégât
         #sinon si le sort est de type défensif, affiche : avec [nombre de points de récupération] points de récupération
