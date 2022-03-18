@@ -22,19 +22,21 @@ class Sorcier :
     def getPDV(self):
         #self.PDV1 = 5
         #self.PDV2 = 5
-        self.PDV = 5
+        print("Le sorcier a " + self.PDV + )
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
+        self.PDV = 
     
     def lancerSort(self,sort):
-        
+        print(self.nom " lance le sort " ) #manque le moyen de récupérer le nom et type du sort 
 		#affiche : [nom du sorcier] lance le sort [nom du sort] de type [type du sort]
         #si le sort est de type offensif ou sournois, affiche : avec [nombre de points de dégâts du sort] points de dégât
         #sinon si le sort est de type défensif, affiche : avec [nombre de points de récupération] points de récupération
 
     def recupererPDV(self,nbPdv):
        #ajoute nbPdv points à la jauge de points de vie du sorcier
+       
     
     def perdrePDV(self,nbPdv):
        #enlève nbPdv points à la jauge de points de vie du sorcier
