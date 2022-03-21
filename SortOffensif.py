@@ -18,3 +18,4 @@ class SortOffensif(Sort):
         self._nom = "Sort offensif"
         self._type = "offensif"
         self._pdd = 3
+        self._pdr = 0
