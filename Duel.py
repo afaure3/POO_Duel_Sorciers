@@ -21,7 +21,6 @@ class Duel:
         #initialisation du premier élément du tableau tours avec le tour courant
         #initialisation de l’état du seul à « en cours »
     
-
     def getTourCourant(self):
         #retourne le tour courant du duel
     
@@ -41,7 +40,6 @@ class Duel:
         #score du tour courant
         #test les valeurs des points de vie stockés dans le score et affiche le résultat (ne pas oublier le match nul)
 
-    
     def afficherResumeDuel(self):
         #affiche : Le duel est terminé. Résumé du duel :
         #pour chaque tour stocké dans la tableau tours, appelle afficheResumeTour()
