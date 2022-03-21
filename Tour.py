@@ -140,6 +140,3 @@ class Tour:
     def afficherResumeTour(self):
         #affiche : # Tour [Numero du Tour] #
         #appel de afficherScoreTour()
-    
-
-           
