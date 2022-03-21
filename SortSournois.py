@@ -19,3 +19,4 @@ class SortSournois(Sort):
         self.nom = "Sort sournois"
         self.type = "sournois"
         self.pdd = 2
+        self.pdr = 0
