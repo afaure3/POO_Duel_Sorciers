@@ -17,13 +17,16 @@ class Sorcier :
         self.nom = print("Entrer le nom du sorcier : ")
      
     def getNom(self):
-        print("Le sorcier s'appelle " + self.nom + ".")  #retourne le nom du sorcier
+        print("Le sorcier s'appelle " + self.nom + ".")
+        return self.nom
+        #retourne le nom du sorcier
         
 
     def getPDV(self):
         #self.PDV1 = 5
         #self.PDV2 = 5
         print("Le sorcier a " + self.PDV +" points de vie." )
+        return self.PDV
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
