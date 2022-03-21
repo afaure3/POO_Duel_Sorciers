@@ -22,7 +22,7 @@ class Sort:
         return self._type
     
     def getPDD(self):
-        return self._pdd
+        raise NotImplementedError
     
     def getPDR(self):
-        return self._pdr
+        raise NotImplementedError
