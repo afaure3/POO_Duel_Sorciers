@@ -31,8 +31,9 @@ class Sorcier :
     
     def lancerSort(self,sort):
         if Sort.getType(self) == "offensif" or "sournois" : 
-            print(self.nom + "lance le sort " + Sort.getNom(self) + " de type " + Sort.getType(self) + " avec " Sort.getPDD(self) + " points de dégats.")
-        else print(self.nom + "lance le sort " + Sort.getNom(self) + " de type " + Sort.getType(self) + " avec " Sort.getPDR(self) + " points de récupération.")
+            print((self.nom) + "lance le sort " + (Sort.getNom(self)) + " de type " + (Sort.getType(self)) + " avec " (Sort.getPDD(self)) + " points de dégats.")
+        else:
+            print((self.nom) + "lance le sort " + (Sort.getNom(self)) + " de type " + (Sort.getType(self)) + " avec " (Sort.getPDR(self)) + " points de récupération.")
 		#affiche : [nom du sorcier] lance le sort [nom du sort] de type [type du sort]
         #si le sort est de type offensif ou sournois, affiche : avec [nombre de points de dégâts du sort] points de dégât
         #sinon si le sort est de type défensif, affiche : avec [nombre de points de récupération] points de récupération
