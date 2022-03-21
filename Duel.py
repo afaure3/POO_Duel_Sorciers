@@ -22,9 +22,11 @@ class Duel:
         #initialisation de l’état du seul à « en cours »
     
     def getTourCourant(self):
+        return tourCourant
         #retourne le tour courant du duel
     
     def getEtat(self):
+        return trucbidule
        #retourne l’état du duel
     
     def setEtat(self,etat):
