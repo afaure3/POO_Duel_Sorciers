@@ -17,4 +17,5 @@ class SortDefensif(Sort):
         Sort.__init__(self)
         self.nom = "Sort défensif"
         self.type = "défensif"
+        self.pdd = 0
         self.pdr = 2
