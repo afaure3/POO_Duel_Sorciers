@@ -11,8 +11,9 @@ from Sort import Sort
 class Sorcier :
 
 
-    def __init__(self,nom):
+    def __init__(self,nom, pdv):
         self.nom = print("Entrer le nom du sorcier : ")
+        self.pdv = 5
      
     def getNom(self):
         return self.nom
@@ -46,3 +47,13 @@ class Sorcier :
        #enlève nbPdv points à la jauge de points de vie du sorcier
        self.nbPdv = Sort.getPDV(self)
        self.PDV = - self.nbPDV 
+       
+
+    if Sort.getType(self) == "Impedimenta":
+       self.point_de_vie = self.point_de_vie - 5
+    if Sort.getType(self) == "Crache Limace":
+       self.point_de_vie = self.point_de_vie - 5
+    if Sort.getType(self) == "Flipendo":
+       self.point_de_vie = self.point_de_vie - 4
+    
+        if Sort.getType(self) == "Flipendo":
