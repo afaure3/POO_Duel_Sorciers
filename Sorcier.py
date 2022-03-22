@@ -41,23 +41,20 @@ class Sorcier :
        #ajoute nbPdv points à la jauge de points de vie du sorcier
        self.nbPdv = Sort.getPDR(self)
        self.pdv = + self.nbPDV
-
-        if Sort.getType(self) == "Sort défensif":
+       if Sort.getType(self) == "Sort défensif":
             self.nbPdv = self.nbPdv + 2
     
     def perdrePDV(self,nbPdv): 
        #enlève nbPdv points à la jauge de points de vie du sorcier
        self.nbPdv = Sort.getPDV(self)
-       self.pdv = - self.nbPDV 
-       
-        if Sort.getType(self) == "Sort offensif":
+       self.pdv = - self.nbPDV
+       if Sort.getType(self) == "Sort offensif":
             if Sort.getType(self) == "Impedimenta":
                 self.nbPdv = self.nbPdv - 5
             elif Sort.getType(self) == "Crache Limace":
                 self.nbPdv = self.nbPdv - 5
             elif Sort.getType(self) == "Flipendo":
                 self.nbPdv = self.nbPdv - 4
-
-        if Sort.getType(self) == "Sort sournois":
+       if Sort.getType(self) == "Sort sournois":
             self.nbPdv = self.nbPdv - 2
 
