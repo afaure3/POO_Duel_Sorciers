@@ -50,11 +50,11 @@ class Sorcier :
        
     if Sort.getType(self) == "Sort offensif":
         if Sort.getType(self) == "Impedimenta":
-        self.nbPdv = self.nbPdv - 5
+            self.nbPdv = self.nbPdv - 5
         elif Sort.getType(self) == "Crache Limace":
-        self.nbPdv = self.nbPdv - 5
+            self.nbPdv = self.nbPdv - 5
         else Sort.getType(self) == "Flipendo":
-        self.nbPdv = self.nbPdv - 4
+            self.nbPdv = self.nbPdv - 4
         
     if Sort.getType(self) == "Sort défensif":
         self.nbPdv = self.nbPdv + 2
