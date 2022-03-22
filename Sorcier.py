@@ -27,7 +27,7 @@ class Sorcier :
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
-        self.PDV = 5
+        self.setPDV = self.pdv - self.pdd or + self.pdr
     
     def lancerSort(self,sort):
         if Sort.getType(self) == "offensif" or "sournois" : 
