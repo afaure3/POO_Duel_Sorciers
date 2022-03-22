@@ -15,7 +15,6 @@ class Sorcier :
         self.nom = print("Entrer le nom du sorcier : ")
      
     def getNom(self):
-        print("Le sorcier s'appelle " + self.nom + ".")
         return self.nom
         #retourne le nom du sorcier
         
