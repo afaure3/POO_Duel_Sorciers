@@ -12,8 +12,6 @@ class Sorcier :
 
 
     def __init__(self,nom):
-        #self.nom1 = print("Entrez le nom du premier sorcier : ")
-        #self.nom2 = print("Entrez le nom du deuxième sorcier : ")
         self.nom = print("Entrer le nom du sorcier : ")
      
     def getNom(self):
@@ -23,8 +21,6 @@ class Sorcier :
         
 
     def getPDV(self):
-        #self.PDV1 = 5
-        #self.PDV2 = 5
         print("Le sorcier a " + self.PDV +" points de vie." )
         return self.PDV
     
