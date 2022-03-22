@@ -13,7 +13,7 @@ from SortSournois import SortSournois
 class Tour:
     
 
-    def function __init__(self,numero, sorcier1, sorcier2):
+    def function __init__(self,numero, sorcier1, sorcier2, sorts, score):
         #initialise le numero du tour
         #initialise la liste sorcier avec les deux sorciers        
         #initialise le score à 0,0
