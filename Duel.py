@@ -26,10 +26,11 @@ class Duel:
         #retourne le tour courant du duel
     
     def getEtat(self):
-        return trucbidule
+        return self.etat
        #retourne l’état du duel
     
     def setEtat(self,etat):
+        self.etat = 
         #modifie l’état du duel
      
     def tourSuivant(self):
