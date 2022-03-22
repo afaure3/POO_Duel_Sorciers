@@ -16,7 +16,6 @@ class Sorcier :
         self.pdv = 5
      
     def getNom(self):
-        print("Le sorcier s'appelle " + self.nom + ".")
         return self.nom
         #retourne le nom du sorcier
         
@@ -48,3 +47,13 @@ class Sorcier :
        #enlève nbPdv points à la jauge de points de vie du sorcier
        self.nbPdv = Sort.getPDV(self)
        self.PDV = - self.nbPDV 
+       
+
+    if Sort.getType(self) == "Impedimenta":
+       self.point_de_vie = self.point_de_vie - 5
+    if Sort.getType(self) == "Crache Limace":
+       self.point_de_vie = self.point_de_vie - 5
+    if Sort.getType(self) == "Flipendo":
+       self.point_de_vie = self.point_de_vie - 4
+    
+        if Sort.getType(self) == "Flipendo":
