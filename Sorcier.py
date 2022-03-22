@@ -21,8 +21,8 @@ class Sorcier :
         
 
     def getPDV(self):
-        print("Le sorcier a " + self.PDV +" points de vie." )
-        return self.PDV
+        print("Le sorcier a " + self.pdv +" points de vie." )
+        return self.pdv
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
@@ -40,13 +40,13 @@ class Sorcier :
     def recupererPDV(self,nbPdv):
        #ajoute nbPdv points à la jauge de points de vie du sorcier
        self.nbPdv = Sort.getPDR(self)
-       self.PDV = + self.nbPDV 
+       self.pdv = + self.nbPDV 
        
     
     def perdrePDV(self,nbPdv): 
        #enlève nbPdv points à la jauge de points de vie du sorcier
        self.nbPdv = Sort.getPDV(self)
-       self.PDV = - self.nbPDV 
+       self.pdv = - self.nbPDV 
        
 
     if Sort.getType(self) == "Impedimenta":
