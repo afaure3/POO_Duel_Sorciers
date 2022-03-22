@@ -57,6 +57,7 @@ if Sort.getType(self) == "Sort offensif":
        self.nbPdv = self.nbPdv - 4
     
 if Sort.getType(self) == "Sort défensif":
-    
+    self.nbPdv = self.nbPdv + 2
 
-if Sort.getType(self) == "Sort défensif":
+if Sort.getType(self) == "Sort sournois":
+    
