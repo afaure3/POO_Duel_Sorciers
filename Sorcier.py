@@ -50,10 +50,10 @@ class Sorcier :
        
 
     if Sort.getType(self) == "Impedimenta":
-       self.point_de_vie = self.point_de_vie - 5
+       self.pdv = self.pdv - 5
     if Sort.getType(self) == "Crache Limace":
-       self.point_de_vie = self.point_de_vie - 5
+       self.pdv = self.pdv - 5
     if Sort.getType(self) == "Flipendo":
-       self.point_de_vie = self.point_de_vie - 4
+       self.pdv = self.pdv - 4
     
         if Sort.getType(self) == "Flipendo":
