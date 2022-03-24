@@ -21,6 +21,10 @@ def main():
     #Instanciation du second sorcier
     sorcier2 = Sorcier(nom2)
 
+    #sorcier2=input("Veuillez saisir le nom du sorcier 2 : ")
+    #Instanciation du second sorcier
+    #sorcier2 = Sorcier()
+
     print("\nLe duel peut commencer\n")
     #Instanciation du duel
     duel=Duel(sorcier1, sorcier2)
