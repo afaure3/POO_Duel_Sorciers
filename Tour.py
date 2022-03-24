@@ -21,7 +21,7 @@ class Tour:
         #initialise le score à 0,0
         self.score = [sorcier1, sorcier [0, 0]]
         #affiche : # Tour [numero du tour] # 
-        print(Tour self.numero)
+        print("Tour" + self.numero)
     
 
     def getNumero(self):
