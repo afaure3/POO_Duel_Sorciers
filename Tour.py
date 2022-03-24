@@ -115,11 +115,12 @@ def tourSorcier2(self):
                        #instancie le sort offensif Flipendo avec 4 points de dégâts
                        sorts.append
                        break
-                    #2 : 
+                    if saisie == 2 : 
                        #instancie le sort offensif Impedimenta avec 5 points de dégâts
                        sorts.append
                        break
-                    #3 : instancie le sort offensif Crache Limace avec 5 points de dégâts
+                    if saisie == 3 : 
+                        #instancie le sort offensif Crache Limace avec 5 points de dégâts
                        sorts.append
                        break
                     #autre saisie : affiche « Mauvaise saisie, veuillez recommencer. »
