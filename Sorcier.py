@@ -11,9 +11,8 @@ from Sort import Sort
 class Sorcier :
 
 
-    def __init__(self,nom, pdv):
+    def __init__(self,nom):
         self.nom = print("Entrer le nom du sorcier : ")
-        self.pdv = 5
      
     def getNom(self):
         return self.nom
@@ -21,7 +20,6 @@ class Sorcier :
         
 
     def getPDV(self):
-        print("Le sorcier a " + self.pdv +" points de vie." )
         return self.pdv
         #retourne les points de vie du sorcier 
     
