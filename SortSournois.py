@@ -18,5 +18,5 @@ class SortSournois(Sort):
         Sort.__init__(self)
         self.nom = "Sort sournois"
         self.type = "sournois"
-        self.pdd = 2
+        self.pdd = NotImplemented
         self.pdr = 0
