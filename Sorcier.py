@@ -66,4 +66,3 @@ class Sorcier :
                 self.nbPdv = self.nbPdv - 3
             elif Sort.getType(self) =="Oubliettes":
                 self.nbPdv = self.nbPdv - 4
-

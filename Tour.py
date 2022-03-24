@@ -13,7 +13,7 @@ from SortSournois import SortSournois
 class Tour:
     
 
-    def function __init__(self,numero, sorcier1, sorcier2, score):
+    def __init__(self,numero, sorcier1, sorcier2, score):
         #initialise le numero du tour
         self.numero = []
         #initialise la liste sorcier avec les deux sorciers 
@@ -21,7 +21,7 @@ class Tour:
         #initialise le score à 0,0
         self.score = [sorcier1, sorcier [0, 0]]
         #affiche : # Tour [numero du tour] # 
-        print(Tour self.numero)
+        print("Tour" + self.numero)
     
 
     def getNumero(self):
@@ -48,14 +48,14 @@ class Tour:
                 #Cas où la saisie est :
                     #1 : 
                        #instancie le sort offensif Flipendo avec 4 points de dégâts
-                       #ajoute le sort à la liste sorts
+                       sorts.append
                        break
                     #2 : 
                        #instancie le sort offensif Impedimenta avec 5 points de dégâts
-                       #ajoute le sort à la liste sorts
+                       sorts.append
                        break
                     #3 : instancie le sort offensif Crache Limace avec 5 points de dégâts
-                       #ajoute le sort à la liste sorts
+                       sorts.append
                        break
                     #autre saisie : affiche « Mauvaise saisie, veuillez recommencer. »
              
