@@ -102,7 +102,7 @@ class Tour:
     
 
 def tourSorcier2(self):
-        #affiche : - [nom du sorcier 1] :
+        #affiche : - [nom du sorcier 2] :
         print(nom2)
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if("""condition test numero"""):
