@@ -15,9 +15,13 @@ class Tour:
 
     def function __init__(self,numero, sorcier1, sorcier2, score):
         #initialise le numero du tour
-        #initialise la liste sorcier avec les deux sorciers        
+        self.numero = []
+        #initialise la liste sorcier avec les deux sorciers 
+        sorcier = [1, 2[sorcier1, sorcier2]]
         #initialise le score à 0,0
+        self.score = [sorcier1, sorcier [0, 0]]
         #affiche : # Tour [numero du tour] # 
+        print(Tour self.numero)
     
 
     def getNumero(self):
