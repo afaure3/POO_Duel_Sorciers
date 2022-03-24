@@ -23,6 +23,7 @@ class Sorcier :
     def getPDV(self):
         print("Le sorcier a " + self.pdv +" points de vie." )
         return self.pdv
+        #retourne les points de vie du sorcier 
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
