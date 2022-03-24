@@ -13,7 +13,7 @@ from SortSournois import SortSournois
 class Tour:
     
 
-    def function __init__(self,numero, sorcier1, sorcier2, sorts, score):
+    def function __init__(self,numero, sorcier1, sorcier2, score):
         #initialise le numero du tour
         #initialise la liste sorcier avec les deux sorciers        
         #initialise le score à 0,0
@@ -35,7 +35,8 @@ class Tour:
     def tourSorcier1(self):
         #affiche : - [nom du sorcier 1] :
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
-        if(#condition test numero):
+        if(#condition test numero
+        ):
        
             while(True):
                 #demande de saisie utilisateur avec le message : Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace :
