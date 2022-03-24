@@ -111,7 +111,7 @@ def tourSorcier2(self):
             while(True):
                 #demande de saisie utilisateur avec le message : Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace :
                 #Cas où la saisie est :
-                    #1 : 
+                    if saisie == 1  : 
                        #instancie le sort offensif Flipendo avec 4 points de dégâts
                        sorts.append
                        break
