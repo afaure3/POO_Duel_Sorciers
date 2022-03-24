@@ -19,3 +19,4 @@ class SortOffensif(Sort):
         self.type = "offensif"
         self.pdd = 3
         self.pdr = 0
+        sorts = []
