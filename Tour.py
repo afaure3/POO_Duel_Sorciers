@@ -33,7 +33,6 @@ class Tour:
         #retourne le score en fin de tour
         return self.score
     
-
     def getSorciers(self):
         #retourne la liste des sorciers participant au tour
         listesorcier = [nom1,nom2]
@@ -42,6 +41,7 @@ class Tour:
     def tourSorcier1(self):
         print(sorcier1)
         #affiche : - [nom du sorcier 1] :
+        print(nom1)
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if numero%3=1 :
             while(True):
@@ -102,8 +102,67 @@ class Tour:
         #le sorcier 1 lance le sort choisi
     
 
-    def tourSorcier2(self):
-     #instructions similaires à tourSorcier1() mais pour le sorcier 2, attention les types de sort diffèrent du sorcier 1 pour le même numéro de tour cf. Règles de combat: Ex: au tour 1 le sorcier 1 lance un sort offensif et le sorcier 2 répond par un sort défensif, etc     
+def tourSorcier2(self):
+        #affiche : - [nom du sorcier 1] :
+        print(nom2)
+        # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
+        if("""condition test numero"""):
+       
+            while(True):
+                #demande de saisie utilisateur avec le message : Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace :
+                #Cas où la saisie est :
+                    #1 : 
+                       #instancie le sort offensif Flipendo avec 4 points de dégâts
+                       sorts.append
+                       break
+                    #2 : 
+                       #instancie le sort offensif Impedimenta avec 5 points de dégâts
+                       sorts.append
+                       break
+                    #3 : instancie le sort offensif Crache Limace avec 5 points de dégâts
+                       sorts.append
+                       break
+                    #autre saisie : affiche « Mauvaise saisie, veuillez recommencer. »
+             
+        #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 1 doit lancer un sort sournois
+        elif(#condition test numero):
+       
+            while(True):
+                #demande de saisie utilisateur avec le message : Choisir un sort sournois: 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette :
+                #Cas où la saisie est :
+                    #1 : 
+                       #instancie le sort sournois Legilimens avec 5 points de dégâts
+                       #ajoute le sort à la liste sorts
+                       break
+                    #2 : 
+                       #instancie le sort sournois Morsmordre avec 3 points de dégâts
+                       #ajoute le sort à la liste sorts
+                       break
+                    #3 : instancie le sort sournois Oubliettes avec 4 points de dégâts
+                       #ajoute le sort à la liste sorts
+                       break
+                    #autre saisie : affiche « Mauvaise saisie, veuillez recommencer »
+           
+       # Teste si le numero du tour est 3 ou 6,9,12 etc c’est-à-dire si numero%3=0 -> Dans ce cas le sorcier 1 doit lancer un sort défensif
+        elif(#condition test numero):
+    
+            while(True):
+                #demande de saisie utilisateur avec le message : Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum :
+                #Cas où la saisie est :
+                    #1 : 
+                       #instancie le sort défensif Expelliarmus avec 5 points de dégâts
+                       #ajoute le sort à la liste sorts
+                       break
+                    #2 : 
+                       #instancie le sort défensif Protego avec 3 points de dégâts
+                       #ajoute le sort à la liste sorts
+                       break
+                    #3 : instancie le sort défensif Spero Patronum avec 4 points de dégâts
+                       #ajoute le sort à la liste sorts
+                       break
+                    #autre saisie : affiche « Mauvaise saisie »
+          
+        #le sorcier 1 lance le sort choisi
 
     def calculerPDV(self):
 
