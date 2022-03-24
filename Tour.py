@@ -119,7 +119,7 @@ class Tour:
     
 
 def tourSorcier2(self):
-        #affiche : - [nom du sorcier 1] :
+        #affiche : - [nom du sorcier 2] :
         print(nom2)
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if("""condition test numero"""):
@@ -127,15 +127,16 @@ def tourSorcier2(self):
             while(True):
                 #demande de saisie utilisateur avec le message : Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace :
                 #Cas où la saisie est :
-                    #1 : 
+                    if saisie == 1  : 
                        #instancie le sort offensif Flipendo avec 4 points de dégâts
                        sorts.append
                        break
-                    #2 : 
+                    if saisie == 2 : 
                        #instancie le sort offensif Impedimenta avec 5 points de dégâts
                        sorts.append
                        break
-                    #3 : instancie le sort offensif Crache Limace avec 5 points de dégâts
+                    if saisie == 3 : 
+                        #instancie le sort offensif Crache Limace avec 5 points de dégâts
                        sorts.append
                        break
                     #autre saisie : affiche « Mauvaise saisie, veuillez recommencer. »
