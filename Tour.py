@@ -45,23 +45,23 @@ class Tour:
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if numero%3 == 1 :
             while(True):
-                print('Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
-                if 1 :
+                saisie = print('Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
+                if saisie == 1 :
                     #instancie le sort offensif Flipendo avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif(Flipendo, 4)
                     SortOffensif.append(sorts)
                     break
-                elif 2 :
+                elif saisie == 2 :
                     #instancie le sort offensif Impedimenta avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif(Impedimenta, 5)
                     SortOffensif.append(sorts)
                     break
-                elif 3 :
+                elif saisie == 3 :
                     #instancie le sort offensif Crache Limace avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
-                    SortOffensif(Crache Limace, 5)
+                    SortOffensif(Crache-Limace, 5)
                     SortOffensif.append(sorts)
                     break
                 else:
@@ -69,20 +69,20 @@ class Tour:
         #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 1 doit lancer un sort sournois
         elif numero%3 == 2 :
             while(True):
-                print('Choisir un sort sournois: 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
-                if 1 : 
+                saisie = print('Choisir un sort sournois: 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
+                if saisie == 1 : 
                     #instancie le sort sournois Legilimens avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Legilimens, 5)
                     SortSournois.append(sorts)
                     break
-                elif 2 :
+                elif saisie == 2 :
                     #instancie le sort sournois Morsmordre avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Morsmordre, 3)
                     SortSournois.append(sorts)
                     break
-                elif 3 :
+                elif aisie == 3 :
                     #instancie le sort sournois Oubliettes avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Oubliettes, 4)
@@ -93,23 +93,23 @@ class Tour:
        # Teste si le numero du tour est 3 ou 6,9,12 etc c’est-à-dire si numero%3=0 -> Dans ce cas le sorcier 1 doit lancer un sort défensif
         elif numero%3 == 0 :
             while(True):
-                print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
-                if 1 :
+                saisie = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
+                if saisie == 1 :
                     #instancie le sort défensif Expelliarmus avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif(Expelliarmus, 5)
                     SortDefensif.append(sorts)
                     break
-                elif 2 :
+                elif saisie == 2 :
                     #instancie le sort défensif Protego avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif(Protego, 3)
                     SortDefensif.append(sorts)
                     break
-                elif 3 :
+                elif saisie == 3 :
                     #instancie le sort défensif Spero Patronum avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
-                    SortDefensif(Spero Patronum, 4)
+                    SortDefensif(Spero-Patronum, 4)
                     SortDefensif.append(sorts)
                     break
                 else:
