@@ -45,7 +45,7 @@ class Tour:
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if numero%3 == 1 :
             while(True):
-                saisie = print('Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
+                saisie = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisie == 1 :
                     #instancie le sort offensif Flipendo avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
@@ -69,7 +69,7 @@ class Tour:
         #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 1 doit lancer un sort sournois
         elif numero%3 == 2 :
             while(True):
-                saisie = print('Choisir un sort sournois: 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
+                saisie = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
                 if saisie == 1 : 
                     #instancie le sort sournois Legilimens avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
@@ -82,7 +82,7 @@ class Tour:
                     SortSournois(Morsmordre, 3)
                     SortSournois.append(sorts)
                     break
-                elif aisie == 3 :
+                elif saisie == 3 :
                     #instancie le sort sournois Oubliettes avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Oubliettes, 4)
@@ -121,8 +121,8 @@ class Tour:
 def tourSorcier2(self):
         #affiche : - [nom du sorcier 2] :
         print(nom2)
-        # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
-        if("""condition test numero"""):
+        # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 2 doit lancer un sort offensif
+        if(numero%3=1):
        
             while(True):
                 #demande de saisie utilisateur avec le message : Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace :
