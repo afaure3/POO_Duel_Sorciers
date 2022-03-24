@@ -36,8 +36,8 @@ class Tour:
 
     def getSorciers(self):
         #retourne la liste des sorciers participant au tour
-        return array.append(nom1)
-        return array.append(nom2)
+        listesorcier = [nom1,nom2]
+        print(listesorcier)
 
     def tourSorcier1(self):
         #affiche : - [nom du sorcier 1] :
