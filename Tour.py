@@ -222,5 +222,5 @@ def tourSorcier2(self):
     
 
     def afficherResumeTour(self):
-        #affiche : # Tour [Numero du Tour] #
-        #appel de afficherScoreTour()
+        print('Tour' + self.numero)
+        afficherScoreTour()
