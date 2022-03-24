@@ -26,10 +26,12 @@ class Tour:
 
     def getNumero(self):
         #retourne le numero du tour
+        return self.numero
     
 
     def getScore(self):
         #retourne le score en fin de tour
+        return self.score
     
 
     def getSorciers(self):
@@ -41,10 +43,7 @@ class Tour:
         #affiche : - [nom du sorcier 1] :
         print(nom1)
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
-        if numero%3=1
-        
-        (#condition test numero
-        ):
+        if("""condition test numero"""):
        
             while(True):
                 #demande de saisie utilisateur avec le message : Choisir un sort offensif: 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace :
