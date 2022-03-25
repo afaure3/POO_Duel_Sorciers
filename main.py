@@ -6,8 +6,6 @@ Created on Sun Jan  2 11:52:05 2022
 @author: pthuringer
 """
 
-
-
 from Sorcier import Sorcier
 from Duel import Duel
 
