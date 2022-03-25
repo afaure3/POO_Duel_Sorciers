@@ -15,7 +15,3 @@ from Sort import Sort
 class SortOffensif(Sort):
     def __init__(self,nom, pdd):
         Sort.__init__(self)
-        self.nom = "Sort offensif"
-        self.type = "offensif"
-        self.pdd = 3
-        self.pdr = 0
