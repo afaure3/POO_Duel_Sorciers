@@ -19,7 +19,7 @@ class Tour:
         #initialise la liste sorcier avec les deux sorciers 
         sorcier = [[1, 2],[sorcier1, sorcier2]]
         #initialise le score à 0,0
-        self.score = [[sorcier1, sorcier], [0, 0]]
+        score = [[sorcier1, sorcier], [0, 0]]
         #affiche : # Tour [numero du tour] # 
         print("Tour" + self.numero)
     
@@ -30,7 +30,7 @@ class Tour:
 
     def getScore(self):
         #retourne le score en fin de tour
-        return self.score
+        return score
     
     def getSorciers(self):
         #retourne la liste des sorciers participant au tour
@@ -231,7 +231,7 @@ def tourSorcier2(self):
     
 
     def afficherScoreTour(self):
-        print(self.score)
+        print(getScore(score))
 
     def afficherResumeTour(self):
         print('Tour' + self.numero)
