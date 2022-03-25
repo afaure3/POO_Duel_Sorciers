@@ -11,7 +11,6 @@ from Tour import Tour
 
 class Duel:
 
-
     def __init__(self,sorcier1, sorcier2):
         #initialisation du sorcier 1
         #initialisation du sorcier 2
