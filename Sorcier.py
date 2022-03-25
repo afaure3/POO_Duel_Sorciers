@@ -12,7 +12,7 @@ class Sorcier :
 
 
     def __init__(self,nom):
-        self.nom = print("Entrer le nom du sorcier : ")
+        ???
      
     def getNom(self):
         return self.nom
