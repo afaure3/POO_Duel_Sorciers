@@ -23,7 +23,6 @@ class Tour:
         #affiche : # Tour [numero du tour] # 
         print("Tour" + self.numero)
     
-
     def getNumero(self):
         #retourne le numero du tour
         return self.numero
