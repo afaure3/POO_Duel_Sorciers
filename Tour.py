@@ -197,7 +197,7 @@ def tourSorcier2(self):
     def calculerPDV(self):
 
         #Type du sort lancé par le sorcier 1
-        #Type du sort lancé par le sorcier 1
+        #Type du sort lancé par le sorcier 2
             
         # Test du cas d'un sort offensif contré par un sort défensif
         if(#condition types de sorts):
@@ -231,8 +231,7 @@ def tourSorcier2(self):
     
 
     def afficherScoreTour(self):
-        #affichage du score en fin de tour
-    
+        print(self.score)
 
     def afficherResumeTour(self):
         print('Tour' + self.numero)
