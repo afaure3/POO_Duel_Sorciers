@@ -19,7 +19,7 @@ class Tour:
         #initialise la liste sorcier avec les deux sorciers 
         sorcier = [[1, 2],[sorcier1, sorcier2]]
         #initialise le score à 0,0
-        score = [[sorcier1, sorcier], [0, 0]]
+        score = [[sorcier1, sorcier2], [0, 0]]
         #affiche : # Tour [numero du tour] # 
         print("Tour" + self.numero)
         self.sorts = [[],[]]
