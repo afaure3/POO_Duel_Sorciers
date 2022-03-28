@@ -15,13 +15,14 @@ class Tour:
 
     def __init__(self,numero, sorcier1, sorcier2, score):
         #initialise le numero du tour
-        self.numero = []
+        numero = []
         #initialise la liste sorcier avec les deux sorciers 
         sorcier = [[1, 2],[sorcier1, sorcier2]]
         #initialise le score à 0,0
         score = [[sorcier1, sorcier], [0, 0]]
         #affiche : # Tour [numero du tour] # 
         print("Tour" + self.numero)
+        self.sorts = [[],[]]
     
     def getNumero(self):
         #retourne le numero du tour
@@ -34,8 +35,7 @@ class Tour:
     
     def getSorciers(self):
         #retourne la liste des sorciers participant au tour
-        listesorcier = [nom1,nom2]
-        print(listesorcier)
+        print(sorcier)
 
     def tourSorcier1(self):
         print(sorcier1)
