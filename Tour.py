@@ -48,19 +48,19 @@ class Tour:
                     #instancie le sort offensif Flipendo avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif(Flipendo, 4)
-                    SortOffensif.append(sorts)
+                    self.sorts.append(SortOffensif)
                     break
                 elif saisie == 2 :
                     #instancie le sort offensif Impedimenta avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif(Impedimenta, 5)
-                    SortOffensif.append(sorts)
+                    self.sorts.append(SortOffensif)
                     break
                 elif saisie == 3 :
                     #instancie le sort offensif Crache Limace avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif(Crache-Limace, 5)
-                    SortOffensif.append(sorts)
+                    self.sorts.append(SortOffensif)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
@@ -72,19 +72,19 @@ class Tour:
                     #instancie le sort sournois Legilimens avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Legilimens, 5)
-                    SortSournois.append(sorts)
+                    self.sorts.append(SortSournois)
                     break
                 elif saisie == 2 :
                     #instancie le sort sournois Morsmordre avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Morsmordre, 3)
-                    SortSournois.append(sorts)
+                    self.sorts.append(SortSournois)
                     break
                 elif saisie == 3 :
                     #instancie le sort sournois Oubliettes avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois(Oubliettes, 4)
-                    SortSournois.append(sorts)
+                    self.sorts.append(SortSournois)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer") 
@@ -96,19 +96,19 @@ class Tour:
                     #instancie le sort défensif Expelliarmus avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif(Expelliarmus, 5)
-                    SortDefensif.append(sorts)
+                    self.sorts.append(SortDefensif)
                     break
                 elif saisie == 2 :
                     #instancie le sort défensif Protego avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif(Protego, 3)
-                    SortDefensif.append(sorts)
+                    self.sorts.append(SortDefensif)
                     break
                 elif saisie == 3 :
                     #instancie le sort défensif Spero Patronum avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif(Spero-Patronum, 4)
-                    SortDefensif.append(sorts)
+                    self.sorts.append(SortDefensif)
                     break
                 else:
                     print("Mauvaise saisie.")
