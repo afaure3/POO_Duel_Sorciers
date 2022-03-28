@@ -28,17 +28,16 @@ class Tour:
         #retourne le numero du tour
         return self.numero
     
-
     def getScore(self):
         #retourne le score en fin de tour
         return score
     
     def getSorciers(self):
         #retourne la liste des sorciers participant au tour
-        print(sorcier)
+        return sorcier
 
     def tourSorcier1(self):
-        print(sorcier1)
+        print(nom1)
         #affiche : - [nom du sorcier 1] :
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if numero%3 == 1 :
@@ -117,7 +116,7 @@ class Tour:
     
 
 def tourSorcier2(self):
-        print(sorcier2)
+        print(nom2)
         #affiche : - [nom du sorcier 2] :
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 2 doit lancer un sort défensif
         if numero%3 == 1 :
