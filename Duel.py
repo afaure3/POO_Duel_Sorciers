@@ -13,15 +13,22 @@ class Duel:
 
     def __init__(self,sorcier1, sorcier2):
         #initialisation du sorcier 1
+        self.sorcier1 = sorcier1
         #initialisation du sorcier 2
+        self.sorcier2 = sorcier2
         #initialisation des points de vie du sorcier 1 à 5
+        self.sorcier1.pdv = 5
         #initialisation des points de vie du sorcier 2 à 5
-        #initialisation de tourCourant avec la création d’une instance de Tour       
+        self.sorcier2.pdv = 5
+        #initialisation de tourCourant avec la création d’une instance de Tour
+        tourCourant = Tour.numero
         #initialisation du premier élément du tableau tours avec le tour courant
+        self.tours = [tourCourant]
         #initialisation de l’état du seul à « en cours »
+        self.etat = "en cours"
     
     def getTourCourant(self):
-        return tourCourant
+        return Tour.numero
         #retourne le tour courant du duel
     
     def getEtat(self):
@@ -29,20 +36,32 @@ class Duel:
        #retourne l’état du duel
     
     def setEtat(self,etat):
-        self.etat = 
         #modifie l’état du duel
+        self.etat = etat
+        
      
     def tourSuivant(self):
         #calcule le numero du tour suivant à partir du tour courant
+        tourSuivant = Tour.numero + 1
         #instancie un nouveau Tour avec le numéro suivant
+        Tour.numero = tourSuivant
         #affecte le nouveau tour à tourCourant
+        tourCourant = Tour.numero
         #ajout du nouveau tour à au tableau tours
+        self.tours.append(tourCourant)
     
     def determinerVainqueur(self):
         #score du tour courant
+        Tour.getScore()
         #test les valeurs des points de vie stockés dans le score et affiche le résultat (ne pas oublier le match nul)
+        if Tour.score.sorcier1 == 0:
+            print("le sorcier 2 gagne le duel !")
+        elif Tour.score.sorcier2 == 0:
+            print("Le sorcier 1 a gagné le duel !")
+        elif Tour.score.sorcier1 == 0 and Tour.score.sorcier2 == 0:
+            print("Match nul ! Les deux sorciers ont perdu...")
 
     def afficherResumeDuel(self):
-        #affiche : Le duel est terminé. Résumé du duel :
-        #pour chaque tour stocké dans la tableau tours, appelle afficheResumeTour()
-        #appelle determinerVainqueur
+        print('Le duel est terminé. Résumé du duel : ')
+        Tour.afficheResumeTour()
+        Duel.determinerVainqueur()
