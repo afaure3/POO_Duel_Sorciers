@@ -13,17 +13,16 @@ from SortSournois import SortSournois
 class Tour:
     
 
-    def __init__(self,numero, sorcier1, sorcier2, score):
+    def __init__(self, numero, sorcier1, sorcier2, score):
         #initialise le numero du tour
-        numero = []
+        self.numero = numero
         #initialise la liste sorcier avec les deux sorciers 
-        sorcier = [[1, 2],[sorcier1, sorcier2]]
+        sorcier = [sorcier1, sorcier2]
         #initialise le score à 0,0
-        score = [[sorcier1, sorcier2], [0, 0]]
+        score = [0,0]
         #affiche : # Tour [numero du tour] # 
-        print("Tour" + self.numero)
-        self.sorts = [[],[]]
-    
+        print("Tour" + numero)
+        self.sorts = [] #à revoir -> demande d'un tableau à double dimension
     def getNumero(self):
         #retourne le numero du tour
         return self.numero
@@ -37,25 +36,25 @@ class Tour:
         return sorcier
 
     def tourSorcier1(self):
-        print(nom1)
+        print("-", nom1, " : ")
         #affiche : - [nom du sorcier 1] :
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
         if numero%3 == 1 :
             while(True):
-                saisie = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
-                if saisie == 1 :
+                saisiesorcier1 = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
+                if saisiesorcier1 == 1 :
                     #instancie le sort offensif Flipendo avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif('Flipendo', 4)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisie == 2 :
+                elif saisiesorcier1 == 2 :
                     #instancie le sort offensif Impedimenta avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif('Impedimenta', 5)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisie == 3 :
+                elif saisiesorcier1 == 3 :
                     #instancie le sort offensif Crache Limace avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif('Crache Limace', 5)
@@ -66,20 +65,20 @@ class Tour:
         #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 1 doit lancer un sort sournois
         elif numero%3 == 2 :
             while(True):
-                saisie = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
-                if saisie == 1 : 
+                saisiesorcier1 = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
+                if saisiesorcier1 == 1 : 
                     #instancie le sort sournois Legilimens avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois('Legilimens', 5)
                     self.sorts.append(SortSournois)
                     break
-                elif saisie == 2 :
+                elif saisiesorcier1 == 2 :
                     #instancie le sort sournois Morsmordre avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois('Morsmordre', 3)
                     self.sorts.append(SortSournois)
                     break
-                elif saisie == 3 :
+                elif saisiesorcier1 == 3 :
                     #instancie le sort sournois Oubliettes avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois('Oubliettes', 4)
@@ -90,20 +89,20 @@ class Tour:
        # Teste si le numero du tour est 3 ou 6,9,12 etc c’est-à-dire si numero%3=0 -> Dans ce cas le sorcier 1 doit lancer un sort défensif
         elif numero%3 == 0 :
             while(True):
-                saisie = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
-                if saisie == 1 :
+                saisiesorcier1 = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
+                if saisiesorcier1 == 1 :
                     #instancie le sort défensif Expelliarmus avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif('Expelliarmus', 5)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisie == 2 :
+                elif saisiesorcier1 == 2 :
                     #instancie le sort défensif Protego avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif('Protego', 3)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisie == 3 :
+                elif saisiesorcier1 == 3 :
                     #instancie le sort défensif Spero Patronum avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif('Spero Patronum', 4)
@@ -115,26 +114,26 @@ class Tour:
         #le sorcier 1 lance le sort choisi
     
 
-def tourSorcier2(self):
-        print(nom2)
+    def tourSorcier2(self):
+        print("-", nom2, " : ")
         #affiche : - [nom du sorcier 2] :
         # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 2 doit lancer un sort défensif
         if numero%3 == 1 :
             while(True):
-                saisie = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
+                saisiesorcier2 = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisie == 1 :
                     #instancie le sort défensif Expelliarmus avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif('Expelliarmus', 5)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisie == 2 :
+                elif saisiesorcier2 == 2 :
                     #instancie le sort défensif Protego avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif('Protego', 3)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisie == 3 :
+                elif saisiesorcier2 == 3 :
                     #instancie le sort défensif Spero Patronum avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortDefensif('Spero Patronum', 4)
@@ -145,20 +144,20 @@ def tourSorcier2(self):
         #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 2 doit lancer un sort offensif
         elif numero%3 == 2 :
             while(True):
-                saisie = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
-                if saisie == 1 :
+                saisiesorcier2 = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
+                if saisiesorcier2 == 1 :
                     #instancie le sort offensif Flipendo avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif('Flipendo', 4)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisie == 2 :
+                elif saisiesorcier2 == 2 :
                     #instancie le sort offensif Impedimenta avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif('Impedimenta', 5)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisie == 3 :
+                elif saisiesorcier2 == 3 :
                     #instancie le sort offensif Crache Limace avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortOffensif('Crache Limace', 5)
@@ -169,20 +168,20 @@ def tourSorcier2(self):
        # Teste si le numero du tour est 3 ou 6,9,12 etc c’est-à-dire si numero%3=0 -> Dans ce cas le sorcier 2 doit lancer un sort sournois
         elif numero%3 == 0 :
             while(True):
-                saisie = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
-                if saisie == 1 : 
+                saisiesorcier2 = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
+                if saisiesorcier2 == 1 : 
                     #instancie le sort sournois Legilimens avec 5 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois('Legilimens', 5)
                     self.sorts.append(SortSournois)
                     break
-                elif saisie == 2 :
+                elif saisiesorcier2 == 2 :
                     #instancie le sort sournois Morsmordre avec 3 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois('Morsmordre', 3)
                     self.sorts.append(SortSournois)
                     break
-                elif saisie == 3 :
+                elif saisiesorcier2 == 3 :
                     #instancie le sort sournois Oubliettes avec 4 points de dégâts
                     #ajoute le sort à la liste sorts
                     SortSournois('Oubliettes', 4)
@@ -196,7 +195,9 @@ def tourSorcier2(self):
     def calculerPDV(self):
 
         #Type du sort lancé par le sorcier 1
+        type = Tour.tourSorcier1
         #Type du sort lancé par le sorcier 2
+        type = Tour.tourSorcier2
             
         # Test du cas d'un sort offensif contré par un sort défensif
         if(#condition types de sorts):
