@@ -21,7 +21,7 @@ class Duel:
         #initialisation des points de vie du sorcier 2 à 5
         self.sorcier2.pdv = 5
         #initialisation de tourCourant avec la création d’une instance de Tour
-        tourCourant = Tour.numero
+        self.tourCourant = Tour.numero
         #initialisation du premier élément du tableau tours avec le tour courant
         self.tours = [tourCourant]
         #initialisation de l’état du seul à « en cours »
