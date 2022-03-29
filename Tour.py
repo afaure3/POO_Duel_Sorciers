@@ -9,6 +9,7 @@ Created on Sun Jan  2 12:18:28 2022
 from SortOffensif import SortOffensif
 from SortDefensif import SortDefensif
 from SortSournois import SortSournois
+from Sort import Sort
 
 class Tour:
     
@@ -195,12 +196,12 @@ class Tour:
     def calculerPDV(self):
 
         #Type du sort lancé par le sorcier 1
-        type = Tour.tourSorcier1
+        Sort.type = Tour.tourSorcier1
         #Type du sort lancé par le sorcier 2
-        type = Tour.tourSorcier2
+        Sort.type = Tour.tourSorcier2
             
         # Test du cas d'un sort offensif contré par un sort défensif
-        if(#condition types de sorts):
+        if Sort.type == 'offensif' and Sort.type == 'défensif':
             #points de dégât du sort du sorcier 1
             #application des points de dégâts sur la jauge de pdv du sorcier 2, appel de perdrePDV()
 
