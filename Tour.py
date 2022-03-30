@@ -13,14 +13,13 @@ from Sort import Sort
 from Sorcier import Sorcier
 
 class Tour:
-    def __init__(self, numero, sorcier1, sorcier2, score):
+    def __init__(self, numero, sorcier1, sorcier2):
         self.numero = 1
         self.sorcier = [sorcier1, sorcier2]
-        self.sorcier1 = sorcier1
-        self.sorcier2 = sorcier2
-        self.score = [[sorcier1.pdv],[sorcier2.pdv]]
+        self.score = [{0,0}]
         print("Tour", numero)
-        self.sorts = [] #à revoir -> demande d'un tableau à double dimension
+        self.sorts = [[Sort.getNom(self)],[Sort.getPDD(self)],[Sort.getPDR(self)]]
+                      
     def getNumero(self):
         return Tour.numero
     
@@ -36,15 +35,15 @@ class Tour:
             while(True):
                 saisiesorcier1 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisiesorcier1 == "1" :
-                    SortOffensif('Flipendo', 4, 0)
+                    SortOffensif('Flipendo', 4)
                     self.sorts.append(SortOffensif)
                     break
                 elif saisiesorcier1 == "2" :
-                    SortOffensif('Impedimenta', 5, 0)
+                    SortOffensif('Impedimenta', 5)
                     self.sorts.append(SortOffensif)
                     break
                 elif saisiesorcier1 == "3" :
-                    SortOffensif('Crache Limace', 5, 0)
+                    SortOffensif('Crache Limace', 5)
                     self.sorts.append(SortOffensif)
                     break
                 else:
@@ -53,15 +52,15 @@ class Tour:
             while(True):
                 saisiesorcier1 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
                 if saisiesorcier1 == "1" : 
-                    SortSournois('Legilimens', 5, 0)
+                    SortSournois('Legilimens', 5)
                     self.sorts.append(SortSournois)
                     break
                 elif saisiesorcier1 == "2" :
-                    SortSournois('Morsmordre', 3, 0)
+                    SortSournois('Morsmordre', 3)
                     self.sorts.append(SortSournois)
                     break
                 elif saisiesorcier1 == "3" :
-                    SortSournois('Oubliettes', 4, 0)
+                    SortSournois('Oubliettes', 4)
                     self.sorts.append(SortSournois)
                     break
                 else:
@@ -70,15 +69,15 @@ class Tour:
             while(True):
                 saisiesorcier1 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisiesorcier1 == "1" :
-                    SortDefensif('Expelliarmus', 5, 0)
+                    SortDefensif('Expelliarmus', 5)
                     self.sorts.append(SortDefensif)
                     break
                 elif saisiesorcier1 == "2" :
-                    SortDefensif('Protego', 3, 0)
+                    SortDefensif('Protego', 3)
                     self.sorts.append(SortDefensif)
                     break
                 elif saisiesorcier1 == "3" :
-                    SortDefensif('Spero Patronum', 4, 0)
+                    SortDefensif('Spero Patronum', 4)
                     self.sorts.append(SortDefensif)
                     break
                 else:
@@ -90,15 +89,15 @@ class Tour:
             while(True):
                 saisiesorcier2 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisiesorcier2 == "1" :
-                    SortDefensif('Expelliarmus', 5, 0)
+                    SortDefensif('Expelliarmus', 5)
                     self.sorts.append(SortDefensif)
                     break
                 elif saisiesorcier2 == "2" :
-                    SortDefensif('Protego', 3, 0)
+                    SortDefensif('Protego', 3)
                     self.sorts.append(SortDefensif)
                     break
                 elif saisiesorcier2 == "3" :
-                    SortDefensif('Spero Patronum', 4, 0)
+                    SortDefensif('Spero Patronum', 4)
                     self.sorts.append(SortDefensif)
                     break
                 else:
@@ -107,15 +106,15 @@ class Tour:
             while(True):
                 saisiesorcier2 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisiesorcier2 == "1" :
-                    SortOffensif('Flipendo', 4, 0)
+                    SortOffensif('Flipendo', 4)
                     self.sorts.append(SortOffensif)
                     break
                 elif saisiesorcier2 == "2" :
-                    SortOffensif('Impedimenta', 5, 0)
+                    SortOffensif('Impedimenta', 5)
                     self.sorts.append(SortOffensif)
                     break
                 elif saisiesorcier2 == "3" :
-                    SortOffensif('Crache Limace', 5, 0)
+                    SortOffensif('Crache Limace', 5)
                     self.sorts.append(SortOffensif)
                     break
                 else:
@@ -124,15 +123,15 @@ class Tour:
             while(True):
                 saisiesorcier2 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
                 if saisiesorcier2 == "1" :
-                    SortSournois('Legilimens', 5, 0)
+                    SortSournois('Legilimens', 5)
                     self.sorts.append(SortSournois)
                     break
                 elif saisiesorcier2 == "2" :
-                    SortSournois('Morsmordre', 3, 0)
+                    SortSournois('Morsmordre', 3)
                     self.sorts.append(SortSournois)
                     break
                 elif saisiesorcier2 == "3" :
-                    SortSournois('Oubliettes', 4, 0)
+                    SortSournois('Oubliettes', 4)
                     self.sorts.append(SortSournois)
                     break
                 else:
