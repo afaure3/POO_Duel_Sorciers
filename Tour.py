@@ -201,7 +201,7 @@ class Tour:
         Sort.type = Tour.tourSorcier2
             
         # Test du cas d'un sort offensif contré par un sort défensif
-        if Sort.type == 'offensif' and Sort.type == 'défensif':
+        if Sort.type.tourSorcier1 == 'offensif' and Sort.type.tourSorcier2 == 'défensif':
             #points de dégât du sort du sorcier 1
             #application des points de dégâts sur la jauge de pdv du sorcier 2, appel de perdrePDV()
 
@@ -209,7 +209,7 @@ class Tour:
             #application des points de récupération sur la jauge du sorcier 2, appel de recupererPDV()
         
         # test du cas d'un sort sournois contré par un sort offensif
-        elif(#condition types de sorts):
+        elif Sort.type.tourSorcier1 == 'sournois' and Sort.type.tourSorcier2 == 'offensif':
 
             #point de dégâts du sort du sorcier 1
             #application des point de dégâts sur la jauge du sorcier 2, appel de perdrePDV()
@@ -219,7 +219,7 @@ class Tour:
 
         
         # Test du cas d'un sort défensif contré par un sort sournois
-        elif(#condition types de sorts):
+        elif Sort.type.tourSorcier1 == 'défensif' and Sort.type.tourSorcier2 == 'sournois':
               
             #points de récupération du sort du sorcier 1
             #application des points de récupération sur la jauge du sorcier 1, appel de recupererPDV()
