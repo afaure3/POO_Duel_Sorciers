@@ -13,7 +13,7 @@ from Sort import Sort
         #self.degats = 2    # à voir quand on sera plus loin si plus complexe ou pris en charge par un autre fichier
 
 class SortOffensif(Sort):
-    def __init__(self,nom, pdd):
-        Sort.__init__(self)
+    def __init__(self,nom, pdd, pdr):
         type =  "offensif"
         pdr = 0
+        Sort.__init__(self,nom, type, pdd, pdr)
