@@ -13,15 +13,15 @@ class Duel:
 
     def __init__(self,sorcier1, sorcier2):
         #initialisation du sorcier 1
-        self.sorcier1 = sorcier1 # appel de Sorcier()
+        self.sorcier1 = sorcier1
         #initialisation du sorcier 2
         self.sorcier2 = sorcier2
         #initialisation des points de vie du sorcier 1 à 5
-        self.sorcier1.pdv = 5 #utiliser getPDV()
+        self.sorcier1.setPDV(5)
         #initialisation des points de vie du sorcier 2 à 5
-        self.sorcier2.pdv = 5 #utiliser getPDV()
+        self.sorcier2.setPDV(5)
         #initialisation de tourCourant avec la création d’une instance de Tour
-        self.tourCourant = Tour(1, sorcier1, sorcier2, {0,0})
+        self.tourCourant = Tour(1, sorcier1, sorcier2)
         #initialisation du premier élément du tableau tours avec le tour courant
         self.tours = [self.tourCourant]
         #initialisation de l’état du seul à « en cours »
