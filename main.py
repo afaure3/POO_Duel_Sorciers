@@ -12,14 +12,12 @@ from Duel import Duel
     #main.py : programme principal
 def main():
     nom1=input("Veuillez saisir le nom du sorcier 1 : ")
-    pdv = 5
     #Instanciation du premier sorcier
-    sorcier1 =  Sorcier(nom1, pdv)
+    sorcier1 =  Sorcier(nom1)
 
     nom2=input("Veuillez saisir le nom du sorcier 2 : ")
-    pdv = 5
     #Instanciation du second sorcier
-    sorcier2 = Sorcier(nom2, pdv)
+    sorcier2 = Sorcier(nom2)
 
     print("\nLe duel peut commencer\n")
     #Instanciation du duel
