@@ -11,9 +11,9 @@ from Sort import Sort
 class Sorcier :
 
 
-    def __init__(self,nom,pdv):
+    def __init__(self,nom):
         self.nom = nom
-        self.pdv = pdv
+        self.pdv = 0
      
     def getNom(self):
         return self.nom
@@ -26,7 +26,7 @@ class Sorcier :
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
-        self.pdv = self.nbPdv
+        self.pdv = pdv
     
     def lancerSort(self,sort):
         if Sort.getType(self) == "offensif" or Sort.getType(self) == "sournois" : 
