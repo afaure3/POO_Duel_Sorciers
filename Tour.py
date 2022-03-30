@@ -10,230 +10,203 @@ from SortOffensif import SortOffensif
 from SortDefensif import SortDefensif
 from SortSournois import SortSournois
 from Sort import Sort
+from Sorcier import Sorcier
 
 class Tour:
-    
-
     def __init__(self, numero, sorcier1, sorcier2, score):
-        #initialise le numero du tour
-        self.numero = numero
-        #initialise la liste sorcier avec les deux sorciers 
-        sorcier = [sorcier1, sorcier2]
-        #initialise le score à 0,0
-        score = [0,0]
-        #affiche : # Tour [numero du tour] # 
-        print("Tour" + numero)
+        self.numero = 1
+        self.sorcier = [sorcier1, sorcier2]
+        self.sorcier1 = sorcier1
+        self.sorcier2 = sorcier2
+        self.score = [[0],[0]]
+        print("Tour", numero)
         self.sorts = [] #à revoir -> demande d'un tableau à double dimension
     def getNumero(self):
-        #retourne le numero du tour
-        return self.numero
+        return Tour.numero
     
     def getScore(self):
-        #retourne le score en fin de tour
-        return score
+        return self.score
     
     def getSorciers(self):
-        #retourne la liste des sorciers participant au tour
-        return sorcier
+        return self.sorcier
 
     def tourSorcier1(self):
-        print("-", nom1, " : ")
-        #affiche : - [nom du sorcier 1] :
-        # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 1 doit lancer un sort offensif
-        if numero%3 == 1 :
+        print("-", self.sorcier1, " : ")
+        if self.numero%3 == 1 :
             while(True):
-                saisiesorcier1 = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
-                if saisiesorcier1 == 1 :
-                    #instancie le sort offensif Flipendo avec 4 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortOffensif('Flipendo', 4)
+                saisiesorcier1 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
+                if saisiesorcier1 == "1" :
+                    SortOffensif('Flipendo', 4, 0)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisiesorcier1 == 2 :
-                    #instancie le sort offensif Impedimenta avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortOffensif('Impedimenta', 5)
+                elif saisiesorcier1 == "2" :
+                    SortOffensif('Impedimenta', 5, 0)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisiesorcier1 == 3 :
-                    #instancie le sort offensif Crache Limace avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortOffensif('Crache Limace', 5)
+                elif saisiesorcier1 == "3" :
+                    SortOffensif('Crache Limace', 5, 0)
                     self.sorts.append(SortOffensif)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
-        #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 1 doit lancer un sort sournois
-        elif numero%3 == 2 :
+        elif self.numero%3 == 2 :
             while(True):
-                saisiesorcier1 = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
-                if saisiesorcier1 == 1 : 
-                    #instancie le sort sournois Legilimens avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortSournois('Legilimens', 5)
+                saisiesorcier1 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
+                if saisiesorcier1 == "1" : 
+                    SortSournois('Legilimens', 5, 0)
                     self.sorts.append(SortSournois)
                     break
-                elif saisiesorcier1 == 2 :
-                    #instancie le sort sournois Morsmordre avec 3 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortSournois('Morsmordre', 3)
+                elif saisiesorcier1 == "2" :
+                    SortSournois('Morsmordre', 3, 0)
                     self.sorts.append(SortSournois)
                     break
-                elif saisiesorcier1 == 3 :
-                    #instancie le sort sournois Oubliettes avec 4 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortSournois('Oubliettes', 4)
+                elif saisiesorcier1 == "3" :
+                    SortSournois('Oubliettes', 4, 0)
                     self.sorts.append(SortSournois)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer") 
-       # Teste si le numero du tour est 3 ou 6,9,12 etc c’est-à-dire si numero%3=0 -> Dans ce cas le sorcier 1 doit lancer un sort défensif
-        elif numero%3 == 0 :
+        elif self.numero%3 == 0 :
             while(True):
-                saisiesorcier1 = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
-                if saisiesorcier1 == 1 :
-                    #instancie le sort défensif Expelliarmus avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortDefensif('Expelliarmus', 5)
+                saisiesorcier1 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
+                if saisiesorcier1 == "1" :
+                    SortDefensif('Expelliarmus', 5, 0)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisiesorcier1 == 2 :
-                    #instancie le sort défensif Protego avec 3 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortDefensif('Protego', 3)
+                elif saisiesorcier1 == "2" :
+                    SortDefensif('Protego', 3, 0)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisiesorcier1 == 3 :
-                    #instancie le sort défensif Spero Patronum avec 4 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortDefensif('Spero Patronum', 4)
+                elif saisiesorcier1 == "3" :
+                    SortDefensif('Spero Patronum', 4, 0)
                     self.sorts.append(SortDefensif)
                     break
                 else:
                     print("Mauvaise saisie.")
-          
-        #le sorcier 1 lance le sort choisi
-    
 
     def tourSorcier2(self):
-        print("-", nom2, " : ")
-        #affiche : - [nom du sorcier 2] :
-        # Teste si le numero du tour est 1 ou 4,7,10 etc c’est-à-dire si numero%3=1 -> Dans ce cas le sorcier 2 doit lancer un sort défensif
-        if numero%3 == 1 :
+        print("-", self.sorcier2, " : ")
+        if self.numero%3 == 1 :
             while(True):
-                saisiesorcier2 = print("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
-                if saisie == 1 :
-                    #instancie le sort défensif Expelliarmus avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortDefensif('Expelliarmus', 5)
+                saisiesorcier2 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
+                if saisiesorcier2 == "1" :
+                    SortDefensif('Expelliarmus', 5, 0)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisiesorcier2 == 2 :
-                    #instancie le sort défensif Protego avec 3 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortDefensif('Protego', 3)
+                elif saisiesorcier2 == "2" :
+                    SortDefensif('Protego', 3, 0)
                     self.sorts.append(SortDefensif)
                     break
-                elif saisiesorcier2 == 3 :
-                    #instancie le sort défensif Spero Patronum avec 4 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortDefensif('Spero Patronum', 4)
+                elif saisiesorcier2 == "3" :
+                    SortDefensif('Spero Patronum', 4, 0)
                     self.sorts.append(SortDefensif)
                     break
                 else:
                     print("Mauvaise saisie.")
-        #Teste si le numero du tour est 2 ou 3,8,11 etc c’est-à-dire si numero%3=2 -> Dans ce cas le sorcier 2 doit lancer un sort offensif
-        elif numero%3 == 2 :
+        elif self.numero%3 == 2 :
             while(True):
-                saisiesorcier2 = print('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
-                if saisiesorcier2 == 1 :
-                    #instancie le sort offensif Flipendo avec 4 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortOffensif('Flipendo', 4)
+                saisiesorcier2 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
+                if saisiesorcier2 == "1" :
+                    SortOffensif('Flipendo', 4, 0)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisiesorcier2 == 2 :
-                    #instancie le sort offensif Impedimenta avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortOffensif('Impedimenta', 5)
+                elif saisiesorcier2 == "2" :
+                    SortOffensif('Impedimenta', 5, 0)
                     self.sorts.append(SortOffensif)
                     break
-                elif saisiesorcier2 == 3 :
-                    #instancie le sort offensif Crache Limace avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortOffensif('Crache Limace', 5)
+                elif saisiesorcier2 == "3" :
+                    SortOffensif('Crache Limace', 5, 0)
                     self.sorts.append(SortOffensif)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
-       # Teste si le numero du tour est 3 ou 6,9,12 etc c’est-à-dire si numero%3=0 -> Dans ce cas le sorcier 2 doit lancer un sort sournois
-        elif numero%3 == 0 :
+        elif self.numero%3 == 0 :
             while(True):
-                saisiesorcier2 = print('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliette : ')
-                if saisiesorcier2 == 1 : 
-                    #instancie le sort sournois Legilimens avec 5 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortSournois('Legilimens', 5)
+                saisiesorcier2 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
+                if saisiesorcier2 == "1" :
+                    SortSournois('Legilimens', 5, 0)
                     self.sorts.append(SortSournois)
                     break
-                elif saisiesorcier2 == 2 :
-                    #instancie le sort sournois Morsmordre avec 3 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortSournois('Morsmordre', 3)
+                elif saisiesorcier2 == "2" :
+                    SortSournois('Morsmordre', 3, 0)
                     self.sorts.append(SortSournois)
                     break
-                elif saisiesorcier2 == 3 :
-                    #instancie le sort sournois Oubliettes avec 4 points de dégâts
-                    #ajoute le sort à la liste sorts
-                    SortSournois('Oubliettes', 4)
+                elif saisiesorcier2 == "3" :
+                    SortSournois('Oubliettes', 4, 0)
                     self.sorts.append(SortSournois)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer")
-          
-        #le sorcier 2 lance le sort choisi
 
     def calculerPDV(self):
-
-        #Type du sort lancé par le sorcier 1
-        Sort.type = Tour.tourSorcier1
-        #Type du sort lancé par le sorcier 2
-        Sort.type = Tour.tourSorcier2
+        Sort.type1 = Tour.tourSorcier1
+        Sort.type2 = Tour.tourSorcier2
             
-        # Test du cas d'un sort offensif contré par un sort défensif
-        if Sort.type.tourSorcier1 == 'offensif' and Sort.type.tourSorcier2 == 'défensif':
-            #points de dégât du sort du sorcier 1
-            #application des points de dégâts sur la jauge de pdv du sorcier 2, appel de perdrePDV()
+        if Sort.type1 == 'offensif' and Sort.type2 == 'défensif':
+            if 1:
+                Sort.pdd = 4
+            elif 2 or 3:
+                Sort.pdd = 5
+            else:
+                print("error ¯\_(ツ)_/¯")
+            Sorcier.perdrePDV(self.sorcier1)
 
-            #points de récupération du sort du sorcier2
-            #application des points de récupération sur la jauge du sorcier 2, appel de recupererPDV()
+            if  1:
+                Sort.pdr = 5
+            elif 2:
+                Sort.pdr = 3
+            elif 3:
+                Sort.pdr = 4
+            else:
+                print("error ¯\_(ツ)_/¯")
+            Sorcier.recupererPDV(self.sorcier2)
         
-        # test du cas d'un sort sournois contré par un sort offensif
-        elif Sort.type.tourSorcier1 == 'sournois' and Sort.type.tourSorcier2 == 'offensif':
+        elif Sort.type1 == 'sournois' and Sort.type2 == 'offensif':
+            if 1:
+                Sort.pdd = 5
+            elif 2:
+                Sort.pdd = 3
+            elif 3:
+                Sort.pdd = 4
+            else:
+                print("error ¯\_(ツ)_/¯")
+            Sorcier.perdrePDV(self.sorcier1)
 
-            #point de dégâts du sort du sorcier 1
-            #application des point de dégâts sur la jauge du sorcier 2, appel de perdrePDV()
+            if 1:
+                Sort.pdd = 4
+            elif 2 or 3:
+                Sort.pdd = 5
+            else:
+                print("error ¯\_(ツ)_/¯")
+            Sorcier.perdrePDV(self.sorcier2)
 
-            #points de dégâts du sort du sorcier 2
-            #application des points de dégâts sur la jauge du sorcier 1, appel de perdrePDV()
+        elif Sort.type1 == 'défensif' and Sort.type2 == 'sournois':
+            if 1:
+                Sort.pdr = 5
+            elif 2:
+                Sort.pdr = 3
+            elif 3:
+                Sort.pdr = 4
+            else:
+                print("error ¯\_(ツ)_/¯")
+            Sorcier.recupererPDV(self.sorcier1)
 
+            if 1:
+                Sort.pdd = 5
+            elif 2:
+                Sort.pdd = 3
+            elif 3:
+                Sort.pdd = 4
+            else:
+                print("error ¯\_(ツ)_/¯")
+            Sorcier.perdrePDV(self.sorcier2)
         
-        # Test du cas d'un sort défensif contré par un sort sournois
-        elif Sort.type.tourSorcier1 == 'défensif' and Sort.type.tourSorcier2 == 'sournois':
-              
-            #points de récupération du sort du sorcier 1
-            #application des points de récupération sur la jauge du sorcier 1, appel de recupererPDV()
-
-            #points de dégats du sort du sorcier 2
-            #application des points de dégâts sur la jauge du sorcier 1, appel de perdrePDV()
-        
-
-         #enregistrement des points de vie de chaque sorcier dans le tableau de score en fin de tour      
+        self.score.append(self.sorcier)
     
 
     def afficherScoreTour(self):
-        print(getScore(score))
+        print(Tour.getScore(self))
 
     def afficherResumeTour(self):
         print('Tour' + self.numero)
-        afficherScoreTour()
+        Tour.afficherScoreTour(self)
