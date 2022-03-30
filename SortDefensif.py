@@ -13,7 +13,7 @@ from Sort import Sort
    #     self.degats = 2 # à voir quand on sera plus loin si plus complexe ou pris en charge par un autre fichier + pas sûr du nombre de dégats
 
 class SortDefensif(Sort):
-    def __init__(self,nom, pdr):
-        Sort.__init__(self)
+    def __init__(self,nom, pdr, pdd):
         type =  "défensif"
-        pdd = 0
+        pdr = 0
+        Sort.__init__(self,nom, type, pdr, pdd)
