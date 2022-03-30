@@ -15,3 +15,5 @@ from Sort import Sort
 class SortDefensif(Sort):
     def __init__(self,nom, pdr):
         Sort.__init__(self)
+        type =  "défensif"
+        pdd = 0
