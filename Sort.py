@@ -16,10 +16,10 @@ class Sort:
         self._type = type
     
     def getNom(self):
-        return self._nom
+        return self.nom
 
     def getType(self):
-        return self._type
+        return self.type
     
     def getPDD(self):
         return self.pdd
