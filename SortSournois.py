@@ -16,3 +16,5 @@ from Sort import Sort
 class SortSournois(Sort):
     def __init__(self,nom, pdd):
         Sort.__init__(self)
+        type =  "sournois"
+        pdr = 0
