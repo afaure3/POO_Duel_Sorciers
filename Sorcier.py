@@ -11,8 +11,9 @@ from Sort import Sort
 class Sorcier :
 
 
-    def __init__(self,nom):
+    def __init__(self,nom,pdv):
         self.nom = nom
+        self.pdv = pdv
      
     def getNom(self):
         return self.nom
@@ -25,43 +26,23 @@ class Sorcier :
     
     def setPDV(self,pdv):
         #modifie le nombre de points de vie du sorcier
-        self.setPDV = self.pdv - self.pdd or + self.pdr
+        self.pdv = self.nbPdv
     
     def lancerSort(self,sort):
-        if Sort.getType(self) == "offensif" or "sournois" : 
+        if Sort.getType(self) == "offensif" or Sort.getType(self) == "sournois" : 
             print(self.nom, "lance le sort ", Sort.getNom(self), " de type ", Sort.getType(self), " avec ", Sort.getPDD(self), " points de dégats.")
-        else:
+        elif Sort.getType(self) == "défensif" :
             print(self.nom, "lance le sort ", Sort.getNom(self), " de type ", Sort.getType(self), " avec ", Sort.getPDR(self), " points de récupération.")
+        else:
+            print("error ¯\_(ツ)_/¯")
 		#affiche : [nom du sorcier] lance le sort [nom du sort] de type [type du sort]
         #si le sort est de type offensif ou sournois, affiche : avec [nombre de points de dégâts du sort] points de dégât
         #sinon si le sort est de type défensif, affiche : avec [nombre de points de récupération] points de récupération
 
     def recupererPDV(self,nbPdv):
         #ajoute nbPdv points à la jauge de points de vie du sorcier
-        self.nbPDV = self.pdv + self.nbPDv
-        #if Sort.getType(self) == "Sort défensif":
-            #if Sort.getType(self) == "Expelliarmus":
-                #self.nbPdv = self.nbPdv + 5
-            #elif Sort.getType(self) == "Protego":
-                #self.nbPdv = self.nbPdv + 3
-            #elif Sort.getType(self) == "Spero Patronum":
-                #self.nbPdv = self.nbPdv + 4
+        self.nbPDV = self.pdv + self.pdr
     
     def perdrePDV(self,nbPdv):
         #enlève nbPdv points à la jauge de points de vie du sorcier
-        #self.nbPdv = Sort.getPDV(self)
-        self.nbPDV = self.pdv - self.nbPDV
-        #if Sort.getType(self) == "Sort offensif":
-            #if Sort.getType(self) == "Impedimenta":
-                #self.nbPdv = self.nbPdv - 5
-            #elif Sort.getType(self) == "Crache Limace":
-                #self.nbPdv = self.nbPdv - 5
-            #elif Sort.getType(self) == "Flipendo":
-                #self.nbPdv = self.nbPdv - 4
-        #if Sort.getType(self) == "Sort sournois":
-            #if Sort.getType(self) == "Legilimens" :
-               #self.nbPdv = self.nbPdv - 5
-            #elif Sort.getType(self) =="Morsmordre":
-                #self.nbPdv = self.nbPdv - 3
-            #elif Sort.getType(self) =="Oubliettes":
-                #self.nbPdv = self.nbPdv - 4
+        self.nbPdv = self.pdv - self.pdd
