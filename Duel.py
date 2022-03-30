@@ -21,14 +21,14 @@ class Duel:
         #initialisation des points de vie du sorcier 2 à 5
         self.sorcier2.pdv = 5 #utiliser getPDV()
         #initialisation de tourCourant avec la création d’une instance de Tour
-        self.tourCourant = Tour.__init__
+        self.tourCourant = Tour(1, sorcier1, sorcier2, {0,0})
         #initialisation du premier élément du tableau tours avec le tour courant
         self.tours = [self.tourCourant]
         #initialisation de l’état du seul à « en cours »
         self.etat = "en cours"
     
     def getTourCourant(self):
-        return Tour.numero
+        return self.tourCourant
         #retourne le tour courant du duel
     
     def getEtat(self):
