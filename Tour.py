@@ -18,7 +18,7 @@ class Tour:
         self.sorcier = [sorcier1, sorcier2]
         self.sorcier1 = sorcier1
         self.sorcier2 = sorcier2
-        self.score = [[0],[0]]
+        self.score = [[sorcier1.pdv],[sorcier2.pdv]]
         print("Tour", numero)
         self.sorts = [] #à revoir -> demande d'un tableau à double dimension
     def getNumero(self):
@@ -144,59 +144,59 @@ class Tour:
             
         if Sort.type1 == 'offensif' and Sort.type2 == 'défensif':
             if 1:
-                Sort.pdd = 4
+                SortOffensif.pdd = 4
             elif 2 or 3:
-                Sort.pdd = 5
+                SortOffensif.pdd = 5
             else:
                 print("error ¯\_(ツ)_/¯")
             Sorcier.perdrePDV(self.sorcier1)
 
             if  1:
-                Sort.pdr = 5
+                SortDefensif.pdr = 5
             elif 2:
-                Sort.pdr = 3
+                SortDefensif.pdr = 3
             elif 3:
-                Sort.pdr = 4
+                SortDefensif.pdr = 4
             else:
                 print("error ¯\_(ツ)_/¯")
             Sorcier.recupererPDV(self.sorcier2)
         
         elif Sort.type1 == 'sournois' and Sort.type2 == 'offensif':
             if 1:
-                Sort.pdd = 5
+                SortSournois.pdd = 5
             elif 2:
-                Sort.pdd = 3
+                SortSournois.pdd = 3
             elif 3:
-                Sort.pdd = 4
+                SortSournois.pdd = 4
             else:
                 print("error ¯\_(ツ)_/¯")
             Sorcier.perdrePDV(self.sorcier1)
 
             if 1:
-                Sort.pdd = 4
+                SortOffensif.pdd = 4
             elif 2 or 3:
-                Sort.pdd = 5
+                SortOffensif.pdd = 5
             else:
                 print("error ¯\_(ツ)_/¯")
             Sorcier.perdrePDV(self.sorcier2)
 
         elif Sort.type1 == 'défensif' and Sort.type2 == 'sournois':
             if 1:
-                Sort.pdr = 5
+                SortDefensif.pdr = 5
             elif 2:
-                Sort.pdr = 3
+                SortDefensif.pdr = 3
             elif 3:
-                Sort.pdr = 4
+                SortDefensif.pdr = 4
             else:
                 print("error ¯\_(ツ)_/¯")
             Sorcier.recupererPDV(self.sorcier1)
 
             if 1:
-                Sort.pdd = 5
+                SortSournois.pdd = 5
             elif 2:
-                Sort.pdd = 3
+                SortSournois.pdd = 3
             elif 3:
-                Sort.pdd = 4
+                SortSournois.pdd = 4
             else:
                 print("error ¯\_(ツ)_/¯")
             Sorcier.perdrePDV(self.sorcier2)
