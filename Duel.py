@@ -42,11 +42,11 @@ class Duel:
      
     def tourSuivant(self):
         #calcule le numero du tour suivant à partir du tour courant
-        tourSuivant = Tour.numero + 1
+        tourSuivant = Tour.getNumero(self) + 1
         #instancie un nouveau Tour avec le numéro suivant
-        Tour.numero = tourSuivant
+        self.tourCourant = tourSuivant
         #affecte le nouveau tour à tourCourant
-        tourCourant = Tour.numero
+        tourCourant = Tour.getNumero(self)
         #ajout du nouveau tour à au tableau tours
         self.tours.append(tourCourant)
     
