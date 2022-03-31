@@ -9,7 +9,7 @@ Created on Sun Jan  2 12:17:38 2022
 from Sort import Sort
 
 class SortSournois(Sort):
-    def __init__(self,nom, pdd, pdr):
-        type = "sournois"
-        pdr = 0
-        Sort.__init__(self,nom, type, pdd, pdr)
+    def __init__(self, nom, pdd, pdr):
+        Sort.__init__(self, nom, "sournois", pdd, 0)
+        self.nom = nom
+        self.pdd = pdd
