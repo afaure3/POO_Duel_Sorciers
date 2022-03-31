@@ -41,8 +41,8 @@ class Sorcier :
 
     def recupererPDV(self,nbPdv):
         #ajoute nbPdv points à la jauge de points de vie du sorcier
-        self.nbPDV = self.pdv + self.pdr
+        self.pdv = self.pdv + nbPdv
     
     def perdrePDV(self,nbPdv):
         #enlève nbPdv points à la jauge de points de vie du sorcier
-        self.nbPdv = self.pdv - self.pdd
+        self.pdv = self.pdv - nbPdv
