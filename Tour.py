@@ -21,7 +21,7 @@ class Tour:
         self.sorts = []
                       
     def getNumero(self):
-        return Tour.numero
+        return self.numero
     
     def getScore(self):
         return self.scores
@@ -146,8 +146,6 @@ class Tour:
                 pointsperdus = self.sorts[0].getPDD()
             elif 2 or 3:
                 pointsperdus = self.sorts[0].getPDD()
-            else:
-                print("error ¯\_(ツ)_/¯")
             self.sorciers[1].perdrePDV(pointsperdus)
 
             if 1:
@@ -156,8 +154,6 @@ class Tour:
                 pointsrecup = self.sorts[1].getPDR()
             elif 3:
                 pointsrecup = self.sorts[1].getPDR()
-            else:
-                print("error ¯\_(ツ)_/¯")
             self.sorciers[1].recupererPDV(pointsrecup)
         
         elif type1 == 'sournois' and type2 == 'offensif':
@@ -167,16 +163,12 @@ class Tour:
                 pointsperdus = self.sorts[0].getPDD()
             elif 3:
                 pointsperdus = self.sorts[0].getPDD()
-            else:
-                print("error ¯\_(ツ)_/¯")
             self.sorciers[1].perdrePDV(pointsperdus)
 
             if 1:
                 pointsperdus = self.sorts[1].getPDD()
             elif 2 or 3:
                 pointsperdus = self.sorts[1].getPDD()
-            else:
-                print("error ¯\_(ツ)_/¯")
             self.sorciers[0].perdrePDV(pointsperdus)
 
         elif type1 == 'défensif' and type2 == 'sournois':
@@ -186,8 +178,6 @@ class Tour:
                 pointsrecup = self.sorts[0].getPDR()
             elif 3:
                 pointsrecup = self.sorts[0].getPDR()
-            else:
-                print("error ¯\_(ツ)_/¯")
             self.sorciers[0].recupererPDV(pointsrecup)
 
             if 1:
@@ -196,16 +186,16 @@ class Tour:
                 pointsperdus = self.sorts[1].getPDD()
             elif 3:
                 pointsperdus = self.sorts[1].getPDD()
-            else:
-                print("error ¯\_(ツ)_/¯")
             self.sorciers[0].perdrePDV(pointsperdus)
 
-        self.scores.append(self.sorciers[0].pdv)
+        score1 = self.sorciers[0].getPDV()
+        score2 = self.sorciers[1].getPDV()
+        self.scores = [score1, score2]
     
 
     def afficherScoreTour(self):
         print(Tour.getScore(self))
 
     def afficherResumeTour(self):
-        print('Tour' + self.numero)
-        self.afficherScoreTour(self.numero)
+        print('Tour', self.numero)
+        self.afficherScoreTour()
