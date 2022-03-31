@@ -35,7 +35,7 @@ class Duel:
         return self.etat
        #retourne l’état du duel
     
-    def setEtat(self,etat):
+    def setEtat(self, etat):
         #modifie l’état du duel
         self.etat = etat
         
@@ -52,16 +52,16 @@ class Duel:
     
     def determinerVainqueur(self):
         #score du tour courant
-        Tour.getScore()
+        Tour.getScore(self)
         #test les valeurs des points de vie stockés dans le score et affiche le résultat (ne pas oublier le match nul)
-        if Tour.score.sorcier1 == 0:
+        if Tour.scores[0] == 0:
             print("le sorcier 2 gagne le duel !")
-        elif Tour.score.sorcier2 == 0:
+        elif Tour.scores[1] == 0:
             print("Le sorcier 1 a gagné le duel !")
-        elif Tour.score.sorcier1 == 0 and Tour.score.sorcier2 == 0:
+        elif Tour.scores[0] == 0 and Tour.scores[1] == 0:
             print("Match nul ! Les deux sorciers ont perdu...")
 
     def afficherResumeDuel(self):
         print('Le duel est terminé. Résumé du duel : ')
-        Tour.afficheResumeTour()
-        Duel.determinerVainqueur()
+        Tour.afficherResumeTour(self)
+        Duel.determinerVainqueur(self)
