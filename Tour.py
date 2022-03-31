@@ -14,37 +14,37 @@ from Sorcier import Sorcier
 
 class Tour:
     def __init__(self, numero, sorcier1, sorcier2):
-        self.numero = 1
-        self.sorcier = [sorcier1, sorcier2]
-        self.score = [{0,0}]
+        self.numero = numero
+        self.sorciers = [sorcier1, sorcier2]
+        self.scores = [0, 0]
         print("Tour", numero)
-        self.sorts = [[Sort.getNom(self)],[Sort.getPDD(self)],[Sort.getPDR(self)]]
+        self.sorts = []
                       
     def getNumero(self):
         return Tour.numero
     
     def getScore(self):
-        return self.score
+        return self.scores
     
     def getSorciers(self):
-        return self.sorcier
+        return self.sorciers
 
     def tourSorcier1(self):
-        print("-", self.sorcier1, " : ")
+        print("-", self.sorciers[0].getNom(), " : ")
         if self.numero%3 == 1 :
             while(True):
                 saisiesorcier1 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisiesorcier1 == "1" :
-                    SortOffensif('Flipendo', 4)
-                    self.sorts.append(SortOffensif)
+                    sortoffensif = SortOffensif('Flipendo', 4)
+                    self.sorts.append(sortoffensif)
                     break
                 elif saisiesorcier1 == "2" :
-                    SortOffensif('Impedimenta', 5)
-                    self.sorts.append(SortOffensif)
+                    sortoffensif = SortOffensif('Impedimenta', 5)
+                    self.sorts.append(sortoffensif)
                     break
                 elif saisiesorcier1 == "3" :
-                    SortOffensif('Crache Limace', 5)
-                    self.sorts.append(SortOffensif)
+                    sortoffensif = SortOffensif('Crache Limace', 5)
+                    self.sorts.append(sortoffensif)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
@@ -52,16 +52,16 @@ class Tour:
             while(True):
                 saisiesorcier1 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
                 if saisiesorcier1 == "1" : 
-                    SortSournois('Legilimens', 5)
-                    self.sorts.append(SortSournois)
+                    sortsournois = SortSournois('Legilimens', 5)
+                    self.sorts.append(sortsournois)
                     break
                 elif saisiesorcier1 == "2" :
-                    SortSournois('Morsmordre', 3)
-                    self.sorts.append(SortSournois)
+                    sortsournois = SortSournois('Morsmordre', 3)
+                    self.sorts.append(sortsournois)
                     break
                 elif saisiesorcier1 == "3" :
-                    SortSournois('Oubliettes', 4)
-                    self.sorts.append(SortSournois)
+                    sortsournois = SortSournois('Oubliettes', 4)
+                    self.sorts.append(sortsournois)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer") 
@@ -69,36 +69,36 @@ class Tour:
             while(True):
                 saisiesorcier1 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisiesorcier1 == "1" :
-                    SortDefensif('Expelliarmus', 5)
-                    self.sorts.append(SortDefensif)
+                    sortdefensif = SortDefensif('Expelliarmus', 5)
+                    self.sorts.append(sortdefensif)
                     break
                 elif saisiesorcier1 == "2" :
-                    SortDefensif('Protego', 3)
-                    self.sorts.append(SortDefensif)
+                    sortdefensif = SortDefensif('Protego', 3)
+                    self.sorts.append(sortdefensif)
                     break
                 elif saisiesorcier1 == "3" :
-                    SortDefensif('Spero Patronum', 4)
-                    self.sorts.append(SortDefensif)
+                    sortdefensif = SortDefensif('Spero Patronum', 4)
+                    self.sorts.append(sortdefensif)
                     break
                 else:
                     print("Mauvaise saisie.")
 
     def tourSorcier2(self):
-        print("-", self.sorcier2, " : ")
+        print("-", self.sorciers[1].getNom(), " : ")
         if self.numero%3 == 1 :
             while(True):
                 saisiesorcier2 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisiesorcier2 == "1" :
-                    SortDefensif('Expelliarmus', 5)
-                    self.sorts.append(SortDefensif)
+                    sortdefensif = SortDefensif('Expelliarmus', 5)
+                    self.sorts.append(sortdefensif)
                     break
                 elif saisiesorcier2 == "2" :
-                    SortDefensif('Protego', 3)
-                    self.sorts.append(SortDefensif)
+                    sortdefensif = SortDefensif('Protego', 3)
+                    self.sorts.append(sortdefensif)
                     break
                 elif saisiesorcier2 == "3" :
-                    SortDefensif('Spero Patronum', 4)
-                    self.sorts.append(SortDefensif)
+                    sortdefensif = SortDefensif('Spero Patronum', 4)
+                    self.sorts.append(sortdefensif)
                     break
                 else:
                     print("Mauvaise saisie.")
@@ -106,16 +106,16 @@ class Tour:
             while(True):
                 saisiesorcier2 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisiesorcier2 == "1" :
-                    SortOffensif('Flipendo', 4)
-                    self.sorts.append(SortOffensif)
+                    sortoffensif = SortOffensif('Flipendo', 4)
+                    self.sorts.append(sortoffensif)
                     break
                 elif saisiesorcier2 == "2" :
-                    SortOffensif('Impedimenta', 5)
-                    self.sorts.append(SortOffensif)
+                    sortoffensif = SortOffensif('Impedimenta', 5)
+                    self.sorts.append(sortoffensif)
                     break
                 elif saisiesorcier2 == "3" :
-                    SortOffensif('Crache Limace', 5)
-                    self.sorts.append(SortOffensif)
+                    sortoffensif = SortOffensif('Crache Limace', 5)
+                    self.sorts.append(sortoffensif)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
@@ -123,84 +123,84 @@ class Tour:
             while(True):
                 saisiesorcier2 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
                 if saisiesorcier2 == "1" :
-                    SortSournois('Legilimens', 5)
-                    self.sorts.append(SortSournois)
+                    sortsournois = SortSournois('Legilimens', 5)
+                    self.sorts.append(sortsournois)
                     break
                 elif saisiesorcier2 == "2" :
-                    SortSournois('Morsmordre', 3)
-                    self.sorts.append(SortSournois)
+                    sortsournois = SortSournois('Morsmordre', 3)
+                    self.sorts.append(sortsournois)
                     break
                 elif saisiesorcier2 == "3" :
-                    SortSournois('Oubliettes', 4)
-                    self.sorts.append(SortSournois)
+                    sortsournois = SortSournois('Oubliettes', 4)
+                    self.sorts.append(sortsournois)
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer")
 
     def calculerPDV(self):
-        Sort.type1 = Tour.tourSorcier1
-        Sort.type2 = Tour.tourSorcier2
-            
-        if Sort.type1 == 'offensif' and Sort.type2 == 'défensif':
+        type1 = self.sorts[0].getType()
+        type2 = self.sorts[1].getType()
+
+        if type1 == 'offensif' and type2 == 'défensif':
             if 1:
-                SortOffensif.pdd = 4
+                pointsperdus = self.sorts[0].getPDD()
             elif 2 or 3:
-                SortOffensif.pdd = 5
+                pointsperdus = self.sorts[0].getPDD()
             else:
                 print("error ¯\_(ツ)_/¯")
-            Sorcier.perdrePDV(self.sorcier1)
+            self.sorciers[1].perdrePDV(pointsperdus)
 
-            if  1:
-                SortDefensif.pdr = 5
+            if 1:
+                pointsrecup = self.sorts[1].getPDR()
             elif 2:
-                SortDefensif.pdr = 3
+                pointsrecup = self.sorts[1].getPDR()
             elif 3:
-                SortDefensif.pdr = 4
+                pointsrecup = self.sorts[1].getPDR()
             else:
                 print("error ¯\_(ツ)_/¯")
-            Sorcier.recupererPDV(self.sorcier2)
+            self.sorciers[1].recupererPDV(pointsrecup)
         
-        elif Sort.type1 == 'sournois' and Sort.type2 == 'offensif':
+        elif type1 == 'sournois' and type2 == 'offensif':
             if 1:
-                SortSournois.pdd = 5
+                pointsperdus = self.sorts[0].getPDD()
             elif 2:
-                SortSournois.pdd = 3
+                pointsperdus = self.sorts[0].getPDD()
             elif 3:
-                SortSournois.pdd = 4
+                pointsperdus = self.sorts[0].getPDD()
             else:
                 print("error ¯\_(ツ)_/¯")
-            Sorcier.perdrePDV(self.sorcier1)
+            self.sorciers[1].perdrePDV(pointsperdus)
 
             if 1:
-                SortOffensif.pdd = 4
+                pointsperdus = self.sorts[1].getPDD()
             elif 2 or 3:
-                SortOffensif.pdd = 5
+                pointsperdus = self.sorts[1].getPDD()
             else:
                 print("error ¯\_(ツ)_/¯")
-            Sorcier.perdrePDV(self.sorcier2)
+            self.sorciers[0].perdrePDV(pointsperdus)
 
-        elif Sort.type1 == 'défensif' and Sort.type2 == 'sournois':
+        elif type1 == 'défensif' and type2 == 'sournois':
             if 1:
-                SortDefensif.pdr = 5
+                pointsrecup = self.sorts[0].getPDR()
             elif 2:
-                SortDefensif.pdr = 3
+                pointsrecup = self.sorts[0].getPDR()
             elif 3:
-                SortDefensif.pdr = 4
+                pointsrecup = self.sorts[0].getPDR()
             else:
                 print("error ¯\_(ツ)_/¯")
-            Sorcier.recupererPDV(self.sorcier1)
+            self.sorciers[0].recupererPDV(pointsrecup)
 
             if 1:
-                SortSournois.pdd = 5
+                pointsperdus = self.sorts[1].getPDD()
             elif 2:
-                SortSournois.pdd = 3
+                pointsperdus = self.sorts[1].getPDD()
             elif 3:
-                SortSournois.pdd = 4
+                pointsperdus = self.sorts[1].getPDD()
             else:
                 print("error ¯\_(ツ)_/¯")
-            Sorcier.perdrePDV(self.sorcier2)
-        
-        self.score.append(self.sorcier)
+            self.sorciers[0].perdrePDV(pointsperdus)
+
+        self.scores.append(self.sorciers[0].pdv)
     
 
     def afficherScoreTour(self):
@@ -208,4 +208,4 @@ class Tour:
 
     def afficherResumeTour(self):
         print('Tour' + self.numero)
-        Tour.afficherScoreTour(self)
+        self.afficherScoreTour(self.numero)
