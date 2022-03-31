@@ -19,7 +19,7 @@ class Sort:
         return self.nom
 
     def getType(self):
-        return self.type
+        return self._type
     
     def getPDD(self):
         return self.pdd
