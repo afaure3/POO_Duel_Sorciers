@@ -14,24 +14,24 @@ from Sorcier import Sorcier
 
 class Tour:
     def __init__(self, numero, sorcier1, sorcier2):
-        self.numero = numero
-        self.sorciers = [sorcier1, sorcier2]
+        self.__numero = numero
+        self.__sorciers = [sorcier1, sorcier2]
         self.scores = [0, 0]
         print("Tour", numero)
         self.sorts = []
                       
     def getNumero(self):
-        return self.numero
+        return self.__numero
     
     def getScore(self):
         return self.scores
     
     def getSorciers(self):
-        return self.sorciers
+        return self.__sorciers
 
     def tourSorcier1(self):
-        print("-", self.sorciers[0].getNom(), " : ")
-        if self.numero%3 == 1:
+        print("-", self.__sorciers[0].getNom(), " : ")
+        if self.__numero%3 == 1:
             while(True):
                 saisiesorcier1 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisiesorcier1 == "1":
@@ -48,7 +48,7 @@ class Tour:
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
-        elif self.numero%3 == 2:
+        elif self.__numero%3 == 2:
             while(True):
                 saisiesorcier1 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
                 if saisiesorcier1 == "1":
@@ -65,7 +65,7 @@ class Tour:
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer") 
-        elif self.numero%3 == 0:
+        elif self.__numero%3 == 0:
             while(True):
                 saisiesorcier1 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisiesorcier1 == "1":
@@ -83,11 +83,11 @@ class Tour:
                 else:
                     print("Mauvaise saisie.")
 
-        self.sorciers[0].lancerSort(choixsort)
+        self.__sorciers[0].lancerSort(choixsort)
 
     def tourSorcier2(self):
-        print("-", self.sorciers[1].getNom(), " : ")
-        if self.numero%3 == 1:
+        print("-", self.__sorciers[1].getNom(), " : ")
+        if self.__numero%3 == 1:
             while(True):
                 saisiesorcier2 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
                 if saisiesorcier2 == "1":
@@ -104,7 +104,7 @@ class Tour:
                     break
                 else:
                     print("Mauvaise saisie.")
-        elif self.numero%3 == 2:
+        elif self.__numero%3 == 2:
             while(True):
                 saisiesorcier2 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
                 if saisiesorcier2 == "1":
@@ -121,7 +121,7 @@ class Tour:
                     break
                 else:
                     print("Mauvaise saisie, veuillez recommencer.")
-        elif self.numero%3 == 0:
+        elif self.__numero%3 == 0:
             while(True):
                 saisiesorcier2 = input('Choisir un sort sournois : 1 pour Legilimens, 2 pour Morsmordre, 3 pour Oubliettes : ')
                 if saisiesorcier2 == "1":
@@ -139,7 +139,7 @@ class Tour:
                 else:
                     print("Mauvaise saisie, veuillez recommencer")
 
-        self.sorciers[1].lancerSort(choixsort)
+        self.__sorciers[1].lancerSort(choixsort)
 
     def calculerPDV(self):
         type1 = self.sorts[0].getType()
@@ -150,7 +150,7 @@ class Tour:
                 pointsperdus = self.sorts[0].getPDD()
             elif 2 or 3:
                 pointsperdus = self.sorts[0].getPDD()
-            self.sorciers[1].perdrePDV(pointsperdus)
+            self.__sorciers[1].perdrePDV(pointsperdus)
 
             if 1:
                 pointsrecup = self.sorts[1].getPDR()
@@ -158,7 +158,7 @@ class Tour:
                 pointsrecup = self.sorts[1].getPDR()
             elif 3:
                 pointsrecup = self.sorts[1].getPDR()
-            self.sorciers[1].recupererPDV(pointsrecup)
+            self.__sorciers[1].recupererPDV(pointsrecup)
         
         elif type1 == 'sournois' and type2 == 'offensif':
             if 1:
@@ -167,13 +167,13 @@ class Tour:
                 pointsperdus = self.sorts[0].getPDD()
             elif 3:
                 pointsperdus = self.sorts[0].getPDD()
-            self.sorciers[1].perdrePDV(pointsperdus)
+            self.__sorciers[1].perdrePDV(pointsperdus)
 
             if 1:
                 pointsperdus = self.sorts[1].getPDD()
             elif 2 or 3:
                 pointsperdus = self.sorts[1].getPDD()
-            self.sorciers[0].perdrePDV(pointsperdus)
+            self.__sorciers[0].perdrePDV(pointsperdus)
 
         elif type1 == 'défensif' and type2 == 'sournois':
             if 1:
@@ -182,7 +182,7 @@ class Tour:
                 pointsrecup = self.sorts[0].getPDR()
             elif 3:
                 pointsrecup = self.sorts[0].getPDR()
-            self.sorciers[0].recupererPDV(pointsrecup)
+            self.__sorciers[0].recupererPDV(pointsrecup)
 
             if 1:
                 pointsperdus = self.sorts[1].getPDD()
@@ -190,10 +190,10 @@ class Tour:
                 pointsperdus = self.sorts[1].getPDD()
             elif 3:
                 pointsperdus = self.sorts[1].getPDD()
-            self.sorciers[0].perdrePDV(pointsperdus)
+            self.__sorciers[0].perdrePDV(pointsperdus)
 
-        score1 = self.sorciers[0].getPDV()
-        score2 = self.sorciers[1].getPDV()
+        score1 = self.__sorciers[0].getPDV()
+        score2 = self.__sorciers[1].getPDV()
         if score1 < 0:
             score1 = 0
         if score2 < 0:
@@ -202,12 +202,11 @@ class Tour:
     
 
     def afficherScoreTour(self):
-        print(Tour.getScore(self))
+        print(self.getScore())
 
     def afficherResumeTour(self):
-        print('Tour')
-        self.getNumero()
-        print('Le sorcier', self.sorciers[0].nom, "a lancé", self.sorts[0].nom)
-        print('Le sorcier', self.sorciers[1].nom, "a lancé", self.sorts[1].nom)
+        print('Tour', self.getNumero())
+        print('Le sorcier', self.__sorciers[0].getNom(), "a lancé", self.sorts[0].getNom())
+        print('Le sorcier', self.__sorciers[1].getNom(), "a lancé", self.sorts[1].getNom())
         print('Le score actuel est :')
         self.afficherScoreTour()
