@@ -42,13 +42,14 @@ class Duel:
      
     def tourSuivant(self):
         #calcule le numero du tour suivant à partir du tour courant
-        tourSuivant = Tour.getNumero(self) + 1
+        numeroSuivant = self.tourCourant.getNumero() + 1
         #instancie un nouveau Tour avec le numéro suivant
-        self.tourCourant = tourSuivant
+        tourSuivant = Tour(numeroSuivant, self.sorcier1, self.sorcier2)
         #affecte le nouveau tour à tourCourant
-        tourCourant = Tour.getNumero(self)
+        self.tourCourant = tourSuivant
         #ajout du nouveau tour à au tableau tours
-        self.tours.append(tourCourant)
+        #self.tours[0].numero = self.tourCourant
+        self.tours.append(self.tourCourant)
     
     def determinerVainqueur(self):
         #score du tour courant
