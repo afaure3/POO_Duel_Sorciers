@@ -12,17 +12,17 @@ class Sorcier :
 
 
     def __init__(self,nom):
-        self.nom = nom
-        self.pdv = 0
+        self.__nom = nom
+        self.__pdv = 0
      
     def getNom(self):
-        return self.nom
+        return self.__nom
 
     def getPDV(self):
-        return self.pdv
+        return self.__pdv
     
     def setPDV(self,pdv):
-        self.pdv = pdv
+        self.__pdv = pdv
     
     def lancerSort(self, sorts):
         if sorts.getType() == "offensif" or sorts.getType() == "sournois":
@@ -31,7 +31,7 @@ class Sorcier :
             print(self.getNom(), "lance le sort", sorts.getNom(), "de type", sorts.getType(), "avec", sorts.getPDR(), "points de récupération.")
 
     def recupererPDV(self,nbPdv):
-        self.pdv = self.pdv + nbPdv
+        self.__pdv = self.__pdv + nbPdv
     
     def perdrePDV(self,nbPdv):
-        self.pdv = self.pdv - nbPdv
+        self.__pdv = self.__pdv - nbPdv
