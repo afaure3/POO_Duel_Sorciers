@@ -17,32 +17,21 @@ class Sorcier :
      
     def getNom(self):
         return self.nom
-        #retourne le nom du sorcier
-        
 
     def getPDV(self):
         return self.pdv
-        #retourne les points de vie du sorcier 
     
     def setPDV(self,pdv):
-        #modifie le nombre de points de vie du sorcier
         self.pdv = pdv
     
-    def lancerSort(self,sort):
-        if Sort.getType(self) == "offensif" or Sort.getType(self) == "sournois" : 
-            print(self.nom, "lance le sort ", Sort.getNom(self), " de type ", Sort.getType(self), " avec ", Sort.getPDD(self), " points de dégats.")
-        elif Sort.getType(self) == "défensif" :
-            print(self.nom, "lance le sort ", Sort.getNom(self), " de type ", Sort.getType(self), " avec ", Sort.getPDR(self), " points de récupération.")
-        else:
-            print("error ¯\_(ツ)_/¯")
-		#affiche : [nom du sorcier] lance le sort [nom du sort] de type [type du sort]
-        #si le sort est de type offensif ou sournois, affiche : avec [nombre de points de dégâts du sort] points de dégât
-        #sinon si le sort est de type défensif, affiche : avec [nombre de points de récupération] points de récupération
+    def lancerSort(self, sorts):
+        if sorts.getType() == "offensif" or sorts.getType() == "sournois":
+            print(self.getNom(), "lance le sort", sorts.getNom(), "de type", sorts.getType(), "avec", sorts.getPDD(), "points de dégats.")
+        elif sorts.getType() == "défensif":
+            print(self.getNom(), "lance le sort", sorts.getNom(), "de type", sorts.getType(), "avec", sorts.getPDR(), "points de récupération.")
 
     def recupererPDV(self,nbPdv):
-        #ajoute nbPdv points à la jauge de points de vie du sorcier
         self.pdv = self.pdv + nbPdv
     
     def perdrePDV(self,nbPdv):
-        #enlève nbPdv points à la jauge de points de vie du sorcier
         self.pdv = self.pdv - nbPdv
