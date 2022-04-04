@@ -43,7 +43,7 @@ class Duel:
         elif score[1] == 0 and score[0] > 0:
             print("Le sorcier 1 a gagné le duel !")
         elif score[0] == 0 and score[1] == 0:
-            print("Match nul ! Les deux sorciers ont perdu...")
+            print("Match nul ! Les deux sorciers ont perdu ...")
 
     def afficherResumeDuel(self):
         print('Le duel est terminé.')
