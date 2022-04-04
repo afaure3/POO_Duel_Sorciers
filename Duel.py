@@ -49,4 +49,5 @@ class Duel:
         print('Le duel est terminé.')
         self.determinerVainqueur()
         print('Résumé du duel : ')
-        self.__tourCourant.afficherResumeTour()
+        for Tour in self.__tours:
+            Tour.afficherResumeTour()
