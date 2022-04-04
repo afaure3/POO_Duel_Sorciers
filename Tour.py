@@ -64,7 +64,7 @@ class Tour:
                     self.__sorts.append(choixsort)
                     break
                 else:
-                    print("Mauvaise saisie, veuillez recommencer") 
+                    print("Mauvaise saisie, veuillez recommencer.") 
         elif self.__numero%3 == 0:
             while(True):
                 saisiesorcier1 = input("Choisir un sort défensif : 1 pour Expelliarmus, 2 pour Protego, 3 pour Spero Patronum : ")
@@ -81,7 +81,7 @@ class Tour:
                     self.__sorts.append(choixsort)
                     break
                 else:
-                    print("Mauvaise saisie.")
+                    print("Mauvaise saisie, veuillez recommencer.")
 
         self.__sorciers[0].lancerSort(choixsort)
 
@@ -103,7 +103,7 @@ class Tour:
                     self.__sorts.append(choixsort)
                     break
                 else:
-                    print("Mauvaise saisie.")
+                    print("Mauvaise saisie, veuillez recommencer.")
         elif self.__numero%3 == 2:
             while(True):
                 saisiesorcier2 = input('Choisir un sort offensif : 1 pour Flipendo, 2 pour Impedimenta, 3 pour Crache limace : ')
@@ -137,7 +137,7 @@ class Tour:
                     self.__sorts.append(choixsort)
                     break
                 else:
-                    print("Mauvaise saisie, veuillez recommencer")
+                    print("Mauvaise saisie, veuillez recommencer.")
 
         self.__sorciers[1].lancerSort(choixsort)
 
@@ -209,11 +209,11 @@ class Tour:
     
 
     def afficherScoreTour(self):
-        print('Le score du Tour est :')
+        print('Le score du tour est :')
         print(self.getScore())
 
     def afficherResumeTour(self):
         print('Tour', self.getNumero())
-        print('Le sorcier', self.__sorciers[0].getNom(), "a lancé", self.__sorts[0].getNom())
-        print('Le sorcier', self.__sorciers[1].getNom(), "a lancé", self.__sorts[1].getNom())
+        print('Le sorcier', self.__sorciers[0].getNom(), "a lancé le sort", self.__sorts[0].getNom(), "!")
+        print('Le sorcier', self.__sorciers[1].getNom(), "a lancé le sort", self.__sorts[1].getNom(), "!")
         self.afficherScoreTour()
