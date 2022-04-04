@@ -32,7 +32,7 @@ def main():
         #recalcul des points de vie
         duel.getTourCourant().calculerPDV()
         #affichage du score
-        duel.getTourCourant().afficherResumeTour()
+        duel.getTourCourant().afficherScoreTour()
        
         score=duel.getTourCourant().getScore()
         #si le nombre de points de vie de chaque sorciers est strictement supérieur à 0
