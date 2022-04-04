@@ -46,6 +46,7 @@ class Duel:
             print("Match nul ! Les deux sorciers ont perdu...")
 
     def afficherResumeDuel(self):
-        print('Le duel est terminé. Résumé du duel : ')
-        self.__tourCourant.afficherResumeTour()
+        print('Le duel est terminé.')
         self.determinerVainqueur()
+        print('Résumé du duel : ')
+        self.__tourCourant.afficherResumeTour()
