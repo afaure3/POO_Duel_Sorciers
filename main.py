@@ -19,7 +19,7 @@ def main():
     #Instanciation du second sorcier
     sorcier2 = Sorcier(nom2)
 
-    print("\nLe duel peut commencer\n")
+    print("\nLe duel peut commencer.\n")
     #Instanciation du duel
     duel=Duel(sorcier1, sorcier2)
 
