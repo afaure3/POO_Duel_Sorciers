@@ -148,7 +148,9 @@ class Tour:
         if type1 == 'offensif':
             if self.__sorts[0].getNom() == "Flipendo":
                 pointsperdus = self.__sorts[0].getPDD()
-            elif self.__sorts[0].getNom() == "Impendimenta" or self.__sorts[0].getNom() == "Crache Limace":
+            elif self.__sorts[0].getNom() == "Impedimenta":
+                pointsperdus = self.__sorts[0].getPDD()
+            elif self.__sorts[0].getNom() == "Crache Limace":
                 pointsperdus = self.__sorts[0].getPDD()
             self.__sorciers[1].perdrePDV(pointsperdus)
 
@@ -173,7 +175,9 @@ class Tour:
         if type2 == 'offensif':
             if self.__sorts[1].getNom() == "Flipendo":
                 pointsperdus = self.__sorts[1].getPDD()
-            elif self.__sorts[1].getNom() == "Impendimenta" or self.__sorts[1].getNom() == "Crache Limace":
+            elif self.__sorts[1].getNom() == "Impedimenta":
+                pointsperdus = self.__sorts[1].getPDD()
+            elif self.__sorts[1].getNom() == "Crache Limace":
                 pointsperdus = self.__sorts[1].getPDD()
             self.__sorciers[0].perdrePDV(pointsperdus)
 
