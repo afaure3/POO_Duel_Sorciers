@@ -26,7 +26,7 @@ class Sorcier :
     
     def lancerSort(self, sorts):
         if sorts.getType() == "offensif" or sorts.getType() == "sournois":
-            print(self.getNom(), "lance le sort", sorts.getNom(), "de type", sorts.getType(), "avec", sorts.getPDD(), "points de dégats.")
+            print(self.getNom(), "lance le sort", sorts.getNom(), "de type", sorts.getType(), "avec", sorts.getPDD(), "points de dégâts.")
         elif sorts.getType() == "défensif":
             print(self.getNom(), "lance le sort", sorts.getNom(), "de type", sorts.getType(), "avec", sorts.getPDR(), "points de récupération.")
 
