@@ -39,7 +39,7 @@ class Duel:
     def determinerVainqueur(self):
         score = self.__tourCourant.getScore()
         if score[0] == 0 and score[1] > 0:
-            print("le sorcier 2 gagne le duel !")
+            print("Le sorcier 2 gagne le duel !")
         elif score[1] == 0 and score[0] > 0:
             print("Le sorcier 1 a gagné le duel !")
         elif score[0] == 0 and score[1] == 0:
