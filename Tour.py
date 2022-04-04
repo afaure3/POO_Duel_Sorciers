@@ -145,50 +145,53 @@ class Tour:
         type1 = self.__sorts[0].getType()
         type2 = self.__sorts[1].getType()
 
-        if type1 == 'offensif' and type2 == 'défensif':
-            if 1:
+        if type1 == 'offensif':
+            if self.__sorts[0].getNom() == "Flipendo":
                 pointsperdus = self.__sorts[0].getPDD()
-            elif 2 or 3:
+            elif self.__sorts[0].getNom() == "Impendimenta" or self.__sorts[0].getNom() == "Crache Limace":
                 pointsperdus = self.__sorts[0].getPDD()
             self.__sorciers[1].perdrePDV(pointsperdus)
 
-            if 1:
+        if type2 == 'défensif':
+            if self.__sorts[1].getNom() == "Expelliarmus":
                 pointsrecup = self.__sorts[1].getPDR()
-            elif 2:
+            elif self.__sorts[1].getNom() == "Protego":
                 pointsrecup = self.__sorts[1].getPDR()
-            elif 3:
+            elif self.__sorts[1].getNom() == "Spero Patronum":
                 pointsrecup = self.__sorts[1].getPDR()
             self.__sorciers[1].recupererPDV(pointsrecup)
         
-        elif type1 == 'sournois' and type2 == 'offensif':
-            if 1:
+        if type1 == 'sournois':
+            if self.__sorts[0].getNom() == "Legilimens":
                 pointsperdus = self.__sorts[0].getPDD()
-            elif 2:
+            elif self.__sorts[0].getNom() == "Morsmordre":
                 pointsperdus = self.__sorts[0].getPDD()
-            elif 3:
+            elif self.__sorts[0].getNom() == "Oubliettes":
                 pointsperdus = self.__sorts[0].getPDD()
             self.__sorciers[1].perdrePDV(pointsperdus)
 
-            if 1:
+        if type2 == 'offensif':
+            if self.__sorts[1].getNom() == "Flipendo":
                 pointsperdus = self.__sorts[1].getPDD()
-            elif 2 or 3:
+            elif self.__sorts[1].getNom() == "Impendimenta" or self.__sorts[1].getNom() == "Crache Limace":
                 pointsperdus = self.__sorts[1].getPDD()
             self.__sorciers[0].perdrePDV(pointsperdus)
 
-        elif type1 == 'défensif' and type2 == 'sournois':
-            if 1:
+        if type1 == 'défensif':
+            if self.__sorts[0].getNom() == "Expelliarmus":
                 pointsrecup = self.__sorts[0].getPDR()
-            elif 2:
+            elif self.__sorts[0].getNom() == "Protego":
                 pointsrecup = self.__sorts[0].getPDR()
-            elif 3:
+            elif self.__sorts[0].getNom() == "Spero Patronum":
                 pointsrecup = self.__sorts[0].getPDR()
             self.__sorciers[0].recupererPDV(pointsrecup)
 
-            if 1:
+        if type2 == 'sournois':
+            if self.__sorts[1].getNom() == "Legilimens":
                 pointsperdus = self.__sorts[1].getPDD()
-            elif 2:
+            elif self.__sorts[1].getNom() == "Morsmordre":
                 pointsperdus = self.__sorts[1].getPDD()
-            elif 3:
+            elif self.__sorts[1].getNom() == "Oubliettes":
                 pointsperdus = self.__sorts[1].getPDD()
             self.__sorciers[0].perdrePDV(pointsperdus)
 
@@ -202,11 +205,11 @@ class Tour:
     
 
     def afficherScoreTour(self):
+        print('Le score du Tour est :')
         print(self.getScore())
 
     def afficherResumeTour(self):
         print('Tour', self.getNumero())
         print('Le sorcier', self.__sorciers[0].getNom(), "a lancé", self.__sorts[0].getNom())
         print('Le sorcier', self.__sorciers[1].getNom(), "a lancé", self.__sorts[1].getNom())
-        print('Le score actuel est :')
         self.afficherScoreTour()
